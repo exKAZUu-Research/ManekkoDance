@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.eclipcebook.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,6 +26,7 @@ public class PartnerActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		// requestWindowFeature(Window.FEATURE_NO_TITLE); //タイトルバー非表示
 		setTitle("お手本画面");
+		Timer.startTimer();
 		setContentView(R.layout.partner);
 		// doLoad();
 

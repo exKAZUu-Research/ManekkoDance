@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.eclipcebook.R;
-
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -27,6 +26,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 //import android.media.MediaPlayer;
 
 public class ActionActivity extends Activity {
@@ -191,7 +191,9 @@ public class ActionActivity extends Activity {
 							// bgm = MediaPlayer.create(getApplicationContext(),
 							// R.raw.good_answer);
 							// bgm.start();
+
 							builder.setIcon(R.drawable.answer_ture);
+							Timer.stopTimer();
 							builder.setNegativeButton("éüÇÃLessonÇ…êiÇﬁ",
 									new DialogInterface.OnClickListener() {
 										@Override
@@ -217,6 +219,16 @@ public class ActionActivity extends Activity {
 											startActivity(intent);
 										}
 									});
+
+							builder.setNeutralButton(Timer.getResultTime(),
+									new DialogInterface.OnClickListener() {
+										public void onClick(
+												DialogInterface dialog,
+												int which) {
+										}
+									}
+
+									);
 
 							builder.setPositiveButton("Ç‡Ç§àÍìxChallenge",
 									new DialogInterface.OnClickListener() {
@@ -269,6 +281,7 @@ public class ActionActivity extends Activity {
 					builder.show();
 				}
 			});
+
 		}
 
 	}

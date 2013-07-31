@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.eclipcebook.R;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -472,6 +471,8 @@ public class MainActivity extends Activity {
 		this.startActivity(intent);
 	}
 
+	
+	
 	public void changeHelpScreen() { // ƒwƒ‹ƒv‰æ–Ê‚Ö‘JˆÚ
 	// bgm = MediaPlayer.create(getApplicationContext(), R.raw.select);
 	// bgm.start();
