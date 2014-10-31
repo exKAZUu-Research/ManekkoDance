@@ -26,10 +26,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e310e8cd-5ccb-41a6-8857-9311cad171c0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial4.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/exkazuu/ManekkoDance/Help.java" afterPath="$PROJECT_DIR$/src/net/exkazuu/ManekkoDance/Help.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/tutorial2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/tutorial2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tutorial2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tutorial2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tutorial2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tutorial2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/tutorial3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/tutorial3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tutorial3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tutorial3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tutorial3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tutorial3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/tutorial4.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/tutorial4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/tutorial4.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/tutorial4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/tutorial4.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/tutorial4.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ManekkoDance.iws" />
