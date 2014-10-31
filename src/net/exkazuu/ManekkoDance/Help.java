@@ -11,7 +11,7 @@ import android.widget.ImageView;
 public class Help extends Activity {
 
 	private int pageNumber;
-	private final String page = " / 6";
+	private final String page = " / 7";
 
 	int[] helpImageResources = { R.drawable.tutorial1, R.drawable.tutorial2,
 			R.drawable.tutorial3, R.drawable.tutorial4,
