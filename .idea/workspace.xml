@@ -26,46 +26,255 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e310e8cd-5ccb-41a6-8857-9311cad171c0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num0.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num0.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num0.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num0.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num0.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num1.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num2.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num3.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num4.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num4.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num4.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num4.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num5.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num5.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num5.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num5.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num5.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num6.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num6.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num6.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num6.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num6.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num8.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num8.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num8.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num8.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num8.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/num9.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/num9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/num9.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/num9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/num9.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/num9.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/num9.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/num9.png" />
+      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\ManekkoDance\res\drawable-hdpi\back_image.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\ManekkoDance\res\drawable-ldpi\back_image.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\ManekkoDance\res\drawable-mdpi\back_image.png" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\hamachi\AndroidstudioProjects\ManekkoDance\res\drawable-xhdpi\back_image.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_basic.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_cocco_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_icon_jump.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_icon_jump.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_korobu_1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_korobu_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_korobu_2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_korobu_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_korobu_3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_korobu_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_basic.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/alt_piyo_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/answer_false.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/answer_false.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/answer_false.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/answer_false.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/answer_false.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/answer_false.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/answer_false.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/answer_false.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/back_ground1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/back_ground1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/back_ground1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/back_ground1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/back_ground1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/back_ground1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/back_ground1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/back_ground1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_basic.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_basic.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_basic.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_basic.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/cocco_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/cocco_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/cocco_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/cocco_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/helptext1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/helptext1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/helptext2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/helptext2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/helptext3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/helptext3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_jump.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_jump.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_jump.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_jump.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_jump.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_jump.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_jump.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_jump.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_left_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_left_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_left_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_left_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_orange.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_orange.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_foot_down.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_foot_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_foot_up.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_foot_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_hand_down.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_hand_down.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_right_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/icon_right_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/icon_right_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_hand_up.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/icon_right_hand_up.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/icon_yellow.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/icon_yellow.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/korobu_1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/korobu_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/korobu_1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/korobu_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/korobu_1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/korobu_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/korobu_1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/korobu_1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/korobu_2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/korobu_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/korobu_2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/korobu_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/korobu_2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/korobu_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/korobu_2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/korobu_2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/korobu_3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/korobu_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/korobu_3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/korobu_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/korobu_3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/korobu_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/korobu_3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/korobu_3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message10.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message10.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message10.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message10.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message4.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message4.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message4.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message4.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message5.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message5.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message5.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message5.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message6.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/lesson_message6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message6.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/lesson_message6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message6.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/lesson_message6.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_basic.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_basic.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_basic.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_basic.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_basic.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_jump1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_jump1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_jump2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_jump2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_left_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_foot_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_foot_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_foot_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_foot_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_foot_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_foot_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_hand_up1.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_hand_up1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_hand_up2.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_hand_up2.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/piyo_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-ldpi/piyo_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-mdpi/piyo_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_hand_up3.png" afterPath="$PROJECT_DIR$/res/drawable-xhdpi/piyo_right_hand_up3.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial1.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial1.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial2.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial3.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial3.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial4.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial4.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/net/exkazuu/ManekkoDance/Help.java" afterPath="$PROJECT_DIR$/src/net/exkazuu/ManekkoDance/Help.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/res/drawable-hdpi/tutorial5.png" afterPath="$PROJECT_DIR$/res/drawable-hdpi/tutorial5.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ManekkoDance.iws" />
@@ -122,8 +331,8 @@
       <file leaf-file-name="Help.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/net/exkazuu/ManekkoDance/Help.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42162162" vertical-offset="524" max-vertical-offset="901">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.7432432" vertical-offset="524" max-vertical-offset="901">
+              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -525,7 +734,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1011,8 +1220,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/net/exkazuu/ManekkoDance/Help.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42162162" vertical-offset="524" max-vertical-offset="901">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.7432432" vertical-offset="524" max-vertical-offset="901">
+          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
           <folding />
         </state>
       </provider>
