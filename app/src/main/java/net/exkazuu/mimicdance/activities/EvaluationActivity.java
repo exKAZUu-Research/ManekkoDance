@@ -143,8 +143,9 @@ public class EvaluationActivity extends BaseActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        TextView whichBirds = (TextView) findViewById(R.id.yellow_or_orange);
-                        whichBirds.setText("きいろのひよこのばあい");
+                        TextView yellowOrOrange = (TextView) findViewById(R.id.yellow_or_orange);
+                        yellowOrOrange.setText("きいろのひよこのばあい");
+                        yellowOrOrange.setTextColor(0xFF807700);
                     }
                 });
             }
@@ -155,8 +156,9 @@ public class EvaluationActivity extends BaseActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        TextView which_birds = (TextView) findViewById(R.id.yellow_or_orange);
-                        which_birds.setText("オレンジのひよこのばあい");
+                        TextView yellowOrOrange = (TextView) findViewById(R.id.yellow_or_orange);
+                        yellowOrOrange.setText("オレンジのひよこのばあい");
+                        yellowOrOrange.setTextColor(0xFFFF3300);
 
                         FrameLayout altPiyoFrame = (FrameLayout) findViewById(R.id.alt_piyo);
                         FrameLayout altCoccoFrame = (FrameLayout) findViewById(R.id.alt_cocco);
@@ -213,14 +215,13 @@ public class EvaluationActivity extends BaseActivity {
                                             Math.min(lessonNumber + 1, Lessons.getLessonCount()), "", true);
                                     }
                                 });
-                            builder.setNeutralButton(Timer.getTime() / 1000 + "秒",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-                                    }
-                                }
-                            );
                         }
                     } else {
+                        int diffCount = piyoProgram.countDifferences(coccoProgram);
+                        if (Lessons.hasIf(lessonNumber)) {
+                            diffCount += altPiyoProgram.countDifferences(altCoccoProgram);
+                        }
+                        builder.setTitle(diffCount + "コまちがっているよ");
                         true_ans.setVisibility(View.GONE);
                         congratulate.setVisibility(View.GONE);
                         builder.setPositiveButton("もういちどチャレンジ",
@@ -244,7 +245,7 @@ public class EvaluationActivity extends BaseActivity {
         }
 
         private void dance(Interpreter piyoExecutor, Interpreter coccoExecutor) {
-            while (!paused && !piyoExecutor.finished() && !coccoExecutor.finished()) {
+            while (!paused && !(piyoExecutor.finished() && coccoExecutor.finished())) {
                 for (int j = 0; j < 2; j++) {
                     handler.post(piyoExecutor);
                     handler.post(coccoExecutor);

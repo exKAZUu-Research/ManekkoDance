@@ -115,7 +115,7 @@ public class CoccoActivity extends BaseActivity {
         public void run() {
             Interpreter coccoExecutor = Interpreter.createForCocco(coccoProgram, coccoViewSet);
             Interpreter altCoccoExecutor = Interpreter.createForCocco(altCoccoProgram, altCoccoViewSet);
-            while (!coccoExecutor.finished() && !altCoccoExecutor.finished()) {
+            while (!(coccoExecutor.finished() && altCoccoExecutor.finished())) {
                 // アニメーションは2コマから構成
                 for (int j = 0; j < 2; j++) {
                     handler.post(coccoExecutor);

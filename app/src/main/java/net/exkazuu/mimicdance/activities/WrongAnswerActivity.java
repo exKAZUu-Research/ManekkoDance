@@ -1,6 +1,7 @@
 package net.exkazuu.mimicdance.activities;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.exkazuu.mimicdance.R;
@@ -33,6 +35,10 @@ public class WrongAnswerActivity extends BaseActivity {
         if (getIntent().getBooleanExtra("almostCorrect", false)) {
             showAltPiyoAnimationForAlmostCorrect(this, altPiyoView);
             showPiyoAnimationForAlmostCorrect(this, piyoView);
+            LinearLayout wrongBackground = (LinearLayout) findViewById(R.id.wrong_background);
+            wrongBackground.setBackgroundColor(0xFF67E47E);
+            TextView wrongTitle = (TextView) findViewById(R.id.wrong_title);
+            wrongTitle.setText("おしい！！！");
         } else {
             showAltPiyoAnimationForWrongAnswer(this, altPiyoView);
             showPiyoAnimationForWrongAnswer(this, piyoView);

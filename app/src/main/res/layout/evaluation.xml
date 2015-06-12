@@ -19,14 +19,14 @@
       android:background="#ffffff"
       android:contentDescription="@string/player_source_code"
       android:ems="10"
+      android:fitsSystemWindows="true"
       android:focusable="false"
       android:gravity="center_vertical|top"
       android:hint="@string/hint_player_source_cord"
+      android:inputType="textMultiLine"
       android:textColor="#000000"
       android:textSize="18sp"
-      android:visibility="visible"
-      android:fitsSystemWindows="true"
-      android:inputType="textMultiLine">
+      android:visibility="visible">
 
       <requestFocus />
     </TextView>
@@ -47,13 +47,13 @@
 
   <TextView
     android:id="@+id/yellow_or_orange"
-    android:layout_width="255dp"
-    android:layout_height="30dp"
-    android:textSize="18sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:textSize="32sp"
     android:visibility="visible" />
 
-
-    <LinearLayout
+  <LinearLayout
     android:id="@+id/hantei"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
