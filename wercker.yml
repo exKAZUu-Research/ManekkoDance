@@ -30,4 +30,4 @@ deploy:
     - script:
         name: upload to deploygate
         code: |
-          curl -F "file=@app/build/outputs/apk/$APK_FILE_NAME" -F "token=632fdf1885ed773380d2f4b54f6691d81955ef27" -F "distribution_key=$DEPLOYGATE_DISTRIBUTINO_KEY" https://deploygate.com/api/users/exKAZUu/apps
+          curl -F "file=@app/build/outputs/apk/$APK_FILE_NAME" -F "token=632fdf1885ed773380d2f4b54f6691d81955ef27" -F "distribution_key=${DEPLOYGATE_DISTRIBUTION_KEY}" https://deploygate.com/api/users/exKAZUu/apps
