@@ -1,16 +1,22 @@
 package net.exkazuu.mimicdance.activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import net.exkazuu.mimicdance.CharacterImageViewSet;
 import net.exkazuu.mimicdance.Lessons;
 import net.exkazuu.mimicdance.R;
+import net.exkazuu.mimicdance.Timer;
 import net.exkazuu.mimicdance.interpreter.Interpreter;
 import net.exkazuu.mimicdance.program.Block;
 import net.exkazuu.mimicdance.program.CodeParser;
@@ -173,16 +179,68 @@ public class EvaluationActivity extends BaseActivity {
                 dance(altPiyoExecutor, altCoccoExecutor);
             }
 
-            int diffCount = piyoProgram.countDifferences(coccoProgram);
-            if (Lessons.hasIf(lessonNumber)) {
-                diffCount += altPiyoProgram.countDifferences(altCoccoProgram);
-            }
-            if (diffCount == 0) {
-                startCorrectAnswerActivity(lessonNumber, true);
-            } else {
-                boolean almostCorrect = diffCount <= (coccoProgram.size() + altCoccoProgram.size()) / 3;
-                startWrongAnswerActivity(lessonNumber, piyoCode, diffCount, almostCorrect, true);
-            }
+            handler.post(new Runnable() {
+                public void run() {
+                    LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+                    View layout = inflater.inflate(R.layout.dialog, (ViewGroup) findViewById(R.id.alertdialog_layout));
+
+                    AlertDialog.Builder builder = new AlertDialog.Builder(EvaluationActivity.this);
+                    builder.setTitle("あなたのこたえは…？");
+                    builder.setView(layout);
+                    ImageView true_ans = (ImageView) layout.findViewById(R.id.ans_true);
+                    ImageView false_ans = (ImageView) layout.findViewById(R.id.ans_false);
+                    TextView congratulate = (TextView) layout.findViewById(R.id.congratulate);
+
+                    if (piyoProgram.countDifferences(coccoProgram) + altPiyoProgram.countDifferences(altCoccoProgram) == 0) {
+                        false_ans.setVisibility(View.GONE);
+                        if (lessonNumber == Lessons.getLessonCount()) {
+                            builder.setNegativeButton("タイトルへもどる",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(
+                                        DialogInterface dialog,
+                                        int which) {
+                                        startTitleActivity(true);
+                                    }
+                                });
+                        } else {
+                            Timer.stop();
+                            builder.setNegativeButton("つぎのレッスンにすすむ",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        startCoccoActivity(
+                                            Math.min(lessonNumber + 1, Lessons.getLessonCount()), "", true);
+                                    }
+                                });
+                            builder.setNeutralButton(Timer.getTime() / 1000 + "秒",
+                                new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+                                    }
+                                }
+                            );
+                        }
+                    } else {
+                        true_ans.setVisibility(View.GONE);
+                        congratulate.setVisibility(View.GONE);
+                        builder.setPositiveButton("もういちどチャレンジ",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    startCodingActivity(lessonNumber, piyoCode, true);
+                                }
+                            });
+                        builder.setNegativeButton("べつのレッスンをえらぶ",
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    startLessonListActivity(true);
+                                }
+                            });
+                    }
+                    builder.show();
+                }
+            });
         }
 
         private void dance(Interpreter piyoExecutor, Interpreter coccoExecutor) {
