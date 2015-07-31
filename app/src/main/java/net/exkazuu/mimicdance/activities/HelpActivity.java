@@ -8,7 +8,7 @@ import android.widget.ImageView;
 
 import net.exkazuu.mimicdance.R;
 
-public class HelpActivity extends Activity {
+public class HelpActivity extends BaseActivity {
     private final int[] HELP_IMAGE_RESOURCES = {R.drawable.tutorial1, R.drawable.tutorial2,
         R.drawable.tutorial3, R.drawable.tutorial4, R.drawable.tutorial5,
         R.drawable.helptext1, R.drawable.helptext2};

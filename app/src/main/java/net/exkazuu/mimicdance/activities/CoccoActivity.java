@@ -34,7 +34,6 @@ public class CoccoActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
 
         Timer.start();
-        DragViewListener.reset();
 
         loadData();
         initializeScreen();

@@ -30,6 +30,12 @@ public class Pose {
         }
     }
 
+    public void reset() {
+        for (int i = 0; i < bodyPart2up.length; i++) {
+            bodyPart2up[i] = false;
+        }
+    }
+
     public boolean isLeftHandUp() {
         return bodyPart2up[BodyPartType.LeftHand.ordinal()];
     }

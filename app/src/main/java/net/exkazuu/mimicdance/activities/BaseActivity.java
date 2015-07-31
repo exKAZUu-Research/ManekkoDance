@@ -101,9 +101,10 @@ public abstract class BaseActivity extends Activity {
      * @param lessonNumber
      * @param clear
      */
-    protected void startCorrectAnswerActivity(int lessonNumber, boolean clear) {
+    protected void startCorrectAnswerActivity(int lessonNumber, String piyoCode, boolean clear) {
         Intent intent = new Intent(this, CorrectAnswerActivity.class);
         intent.putExtra("lessonNumber", lessonNumber);
+        intent.putExtra("piyoCode", piyoCode);
         if (clear) {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }
@@ -131,4 +132,34 @@ public abstract class BaseActivity extends Activity {
         }
         startActivity(intent);
     }
+
+    protected void startPreQuestionnaireActivity( boolean clear) {
+        Intent intent = new Intent(this, PreQuestionnaireActivity.class);
+        if (clear) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        }
+        startActivity(intent);
+    }
+
+    protected void startPostQuestionnaireActivity( boolean clear) {
+        Intent intent = new Intent(this, PostQuestionnaireActivity.class);
+        if (clear) {
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        }
+        startActivity(intent);
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        PlugStateChangeReceiver.register(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        PlugStateChangeReceiver.unregister(this);
+    }
+
 }

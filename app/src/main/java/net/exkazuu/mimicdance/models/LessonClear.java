@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Table(name = "LessonClear")
 public class LessonClear extends Model {
-    @Column(name = "created_at")
+    @Column(name = "Created_at")
     public Date created_at = new Date(System.currentTimeMillis());
 
     @Column(name = "LessonNumber")

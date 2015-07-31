@@ -30,14 +30,22 @@ public class CorrectAnswerActivity extends BaseActivity {
         setContentView(R.layout.correct_answer);
 
         final int lessonNumber = getIntent().getIntExtra("lessonNumber", 1);
+        final String piyoCode = getIntent().getStringExtra("piyoCode");
         ImageView jumpCocco = (ImageView) findViewById(R.id.cocco);
         ImageView jumpPiyo = (ImageView) findViewById(R.id.piyo);
 
         startCoccoAnimation(this, jumpCocco);
         startPiyoAnimation(this, jumpPiyo);
 
+        Button again = (Button) findViewById(R.id.check_again);
         Button list = (Button) findViewById(R.id.correct_lesson_list);
         Button next = (Button) findViewById(R.id.next_lesson);
+        again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startEvaluationActivity(lessonNumber, piyoCode, true);
+            }
+        });
         list.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +64,7 @@ public class CorrectAnswerActivity extends BaseActivity {
         lessonClear.milliseconds = Timer.stop();
         lessonClear.moveCount = DragViewListener.getMoveCount();
         lessonClear.save();
+        DragViewListener.reset();
     }
 
     @Override

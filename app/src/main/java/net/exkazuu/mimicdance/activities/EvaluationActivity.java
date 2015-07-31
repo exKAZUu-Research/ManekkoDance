@@ -138,14 +138,14 @@ public class EvaluationActivity extends BaseActivity {
             Interpreter coccoExecutor = Interpreter.createForCocco(coccoProgram, coccoViewSet);
             Interpreter altCoccoExecutor = Interpreter.createForCocco(altCoccoProgram, altCoccoViewSet);
 
-            // 解析&実行(白と黄)
+            // 解析&実行(白)
             if (Lessons.hasIf(lessonNumber)) {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        TextView yellowOrOrange = (TextView) findViewById(R.id.yellow_or_orange);
-                        yellowOrOrange.setText("きいろのひよこのばあい");
-                        yellowOrOrange.setTextColor(0xFF807700);
+                        TextView whiteOrYellow = (TextView) findViewById(R.id.white_or_orange);
+                        whiteOrYellow.setText("しろいひよこのばあい");
+                        whiteOrYellow.setTextColor(0xFF807700);
                     }
                 });
             }
@@ -156,9 +156,9 @@ public class EvaluationActivity extends BaseActivity {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
-                        TextView yellowOrOrange = (TextView) findViewById(R.id.yellow_or_orange);
-                        yellowOrOrange.setText("オレンジのひよこのばあい");
-                        yellowOrOrange.setTextColor(0xFFFF3300);
+                        TextView whiteOrYellow = (TextView) findViewById(R.id.white_or_orange);
+                        whiteOrYellow.setText("きいろのひよこのばあい");
+                        whiteOrYellow.setTextColor(0xFFFF3300);
 
                         FrameLayout altPiyoFrame = (FrameLayout) findViewById(R.id.alt_piyo);
                         FrameLayout altCoccoFrame = (FrameLayout) findViewById(R.id.alt_cocco);
@@ -177,7 +177,7 @@ public class EvaluationActivity extends BaseActivity {
                 } catch (InterruptedException e) {
                 }
 
-                //解析と実行(茶色と橙)
+                //解析と実行(黄色)
                 dance(altPiyoExecutor, altCoccoExecutor);
             }
 
@@ -260,6 +260,8 @@ public class EvaluationActivity extends BaseActivity {
                     break;
                 }
             }
+            coccoExecutor.finish();
+            piyoExecutor.finish();
         }
     }
 }

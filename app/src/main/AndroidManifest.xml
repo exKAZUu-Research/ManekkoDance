@@ -43,5 +43,11 @@
     <activity
       android:name=".activities.WrongAnswerActivity"
       android:label="@string/wrong_answer"></activity>
+    <activity
+      android:name=".activities.PreQuestionnaireActivity"
+      android:label="@string/pre_questionnaire"></activity>
+    <activity
+      android:name=".activities.PostQuestionnaireActivity"
+      android:label="@string/post_questionnaire"></activity>
   </application>
 </manifest>

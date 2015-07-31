@@ -42,4 +42,17 @@ public class LessonListActivity extends ListActivity {
         intent.putExtra("piyoCode", "");
         startActivity(intent);
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        PlugStateChangeReceiver.register(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        PlugStateChangeReceiver.unregister(this);
+    }
+
 }

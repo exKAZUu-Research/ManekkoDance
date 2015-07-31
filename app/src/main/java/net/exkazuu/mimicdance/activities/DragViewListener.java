@@ -65,6 +65,10 @@ public class DragViewListener implements OnTouchListener {
                     moved = false;
                 }
 
+                if (moved) {
+                    moveCount++;
+                }
+
                 pushProgramTextsToLeft();
                 setProgramIcons();
                 setPiyoCode();

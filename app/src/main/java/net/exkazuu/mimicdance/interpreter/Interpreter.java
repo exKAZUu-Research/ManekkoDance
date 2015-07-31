@@ -1,13 +1,13 @@
 package net.exkazuu.mimicdance.interpreter;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.text.Html;
 import android.util.Log;
 import android.widget.TextView;
 
 import net.exkazuu.mimicdance.CharacterImageViewSet;
-import net.exkazuu.mimicdance.R;
+import net.exkazuu.mimicdance.activities.PlugStateChangeReceiver;
+import net.exkazuu.mimicdance.controller.PwmMotorController;
 import net.exkazuu.mimicdance.program.UnrolledProgram;
 
 import java.util.Collection;
@@ -18,7 +18,6 @@ public class Interpreter implements Runnable {
     public static final int WAITING_COUNT = 2;
     private final UnrolledProgram program;
     private final CharacterImageViewSet charaViewSet;
-    private final Context context;
     private final TextView textView;
     private final boolean isPiyo;
     private final Pose pose;
@@ -26,7 +25,7 @@ public class Interpreter implements Runnable {
     private Set<ActionType> actions;
     private int executionCount;
     private boolean failed;
-    private MediaPlayer playerForHandlingDanbo;
+    private PwmMotorController danboController;
     private String bearCommand;
 
     public static Interpreter createForPiyo(UnrolledProgram program, CharacterImageViewSet charaViewSet, TextView textView, Context context) {
@@ -41,7 +40,6 @@ public class Interpreter implements Runnable {
         this.program = program;
         this.charaViewSet = charaViewSet;
         this.textView = textView;
-        this.context = context;
         this.isPiyo = isPiyo;
         this.pose = new Pose();
         this.bearCommand = "";
@@ -51,11 +49,9 @@ public class Interpreter implements Runnable {
     public void run() {
         if (executionCount < WAITING_COUNT) {
             charaViewSet.changeToInitialImages();
-        }
-        else if (finished()) {
+        } else if (finished()) {
             return;
-        }
-        else if (isMoving()) {
+        } else if (isMoving()) {
             if (isPiyo) {
                 highlightLine();
             }
@@ -81,6 +77,20 @@ public class Interpreter implements Runnable {
             }
         }
         executionCount++;
+    }
+
+    public void finish() {
+        if (isPiyo) {
+            pose.reset();
+            handleDanbo();
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+            }
+            if (danboController != null) {
+                danboController.release();
+            }
+        }
     }
 
     public boolean finished() {
@@ -115,45 +125,38 @@ public class Interpreter implements Runnable {
     }
 
     private void handleDanbo() {
-        if (playerForHandlingDanbo != null) {
-            playerForHandlingDanbo.stop();
+        if (!PlugStateChangeReceiver.isPlugged()) {
+            return;
         }
-        if (pose.isLeftHandUp()) {
-            if (pose.isRightHandUp()) {
-                playerForHandlingDanbo = MediaPlayer.create(context, R.raw.danbo_luru);
-            } else {
-                playerForHandlingDanbo = MediaPlayer.create(context, R.raw.danbo_lu);
-            }
-        } else {
-            if (pose.isRightHandUp()) {
-                playerForHandlingDanbo = MediaPlayer.create(context, R.raw.danbo_ru);
-            } else {
-                playerForHandlingDanbo = MediaPlayer.create(context, R.raw.danbo_c);
-            }
+        if (danboController == null) {
+            danboController = new PwmMotorController(50000, 50);
+            danboController.play();
         }
-        playerForHandlingDanbo.start();
+        double left = pose.isLeftHandUp() ? 0.5 : 1.5;
+        double right = pose.isRightHandUp() ? 2.5 : 1.5;
+        danboController.setPulseMilliseconds(left, right);
     }
 
     private void handleBear(Collection<ActionType> actions) {
         if (actions.contains(ActionType.LeftHandDown)) {
-            bearCommand += "lau";
-        } else if (actions.contains(ActionType.LeftHandUp)) {
             bearCommand = bearCommand.replace("lau", "");
+        } else if (actions.contains(ActionType.LeftHandUp)) {
+            bearCommand += "lau";
         }
         if (actions.contains(ActionType.RightHandDown)) {
-            bearCommand += "rau";
-        } else if (actions.contains(ActionType.RightHandUp)) {
             bearCommand = bearCommand.replace("rau", "");
+        } else if (actions.contains(ActionType.RightHandUp)) {
+            bearCommand += "rau";
         }
         if (actions.contains(ActionType.LeftFootDown)) {
-            bearCommand += "llu";
-        } else if (actions.contains(ActionType.LeftFootUp)) {
             bearCommand = bearCommand.replace("llu", "");
+        } else if (actions.contains(ActionType.LeftFootUp)) {
+            bearCommand += "llu";
         }
         if (actions.contains(ActionType.RightFootDown)) {
-            bearCommand += "rlu";
-        } else if (actions.contains(ActionType.RightFootUp)) {
             bearCommand = bearCommand.replace("rlu", "");
+        } else if (actions.contains(ActionType.RightFootUp)) {
+            bearCommand += "rlu";
         }
         if (actions.contains(ActionType.Jump)) {
             bearCommand += "jump";
@@ -163,4 +166,3 @@ public class Interpreter implements Runnable {
         new BearHandlingTask(bearCommand).execute();
     }
 }
-

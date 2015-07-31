@@ -30,6 +30,30 @@
     android:visibility="gone" />
 
   <Button
+    android:id="@+id/post_ques_button"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_above="@id/start_button"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="22dp"
+    android:onClick="startPostQuestionnaireActivity"
+    android:text="@string/post_questionnaire"
+    android:textSize="24sp"
+    android:visibility="visible" />
+
+  <Button
+    android:id="@+id/pre_ques_button"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_above="@id/post_ques_button"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="22dp"
+    android:onClick="startPreQuestionnaireActivity"
+    android:text="@string/pre_questionnaire"
+    android:textSize="24sp"
+    android:visibility="visible" />
+
+  <Button
     android:id="@+id/free_button"
     android:layout_width="150dp"
     android:layout_height="60dp"
@@ -39,6 +63,42 @@
     android:onClick="freePlay"
     android:text="@string/Title_free_play"
     android:textSize="24sp"
+    android:visibility="gone" />
+
+  <TextView
+    android:id="@+id/txtPulseLength"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/free_button"
+    android:layout_alignLeft="@id/free_button"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:text="Small Text"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:visibility="gone" />
+
+  <TextView
+    android:id="@+id/txtFrequency"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/txtPulseLength"
+    android:layout_alignLeft="@id/txtPulseLength"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:text="Small Text"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:visibility="gone" />
+
+  <TextView
+    android:id="@+id/txtCheck"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@id/txtFrequency"
+    android:layout_alignLeft="@id/txtFrequency"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:text="Small Text"
+    android:textAppearance="?android:attr/textAppearanceSmall"
     android:visibility="gone" />
 
 </RelativeLayout>

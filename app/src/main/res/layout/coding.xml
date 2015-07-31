@@ -126,6 +126,7 @@
             android:src="@drawable/icon_end_if"
             android:visibility="invisible" />
 
+
           <ImageView
             android:id="@+id/numberIconView1"
             android:layout_width="61dip"
@@ -214,7 +215,6 @@
             android:layout_toLeftOf="@id/programIconView10"
             android:src="@drawable/icon_num0"
             android:visibility="invisible" />
-
 
           <!-- 背景たち -->
           <!-- 行番号 -->
@@ -636,13 +636,14 @@
     </LinearLayout>
 
     <ImageView
-      android:id="@+id/helpBuuton1"
+      android:id="@+id/helpButton1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_gravity="bottom|left"
+      android:layout_gravity="bottom|right"
+      android:layout_marginRight="10dp"
+      android:layout_marginBottom="10dp"
       android:onClick="startHelpActivity"
-      android:src="@drawable/help"
-      android:visibility="invisible" />
+      android:src="@drawable/help" />
 
     <FrameLayout
       android:id="@+id/frameLayoutPiyo"

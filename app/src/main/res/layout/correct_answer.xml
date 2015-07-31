@@ -30,15 +30,26 @@
       android:layout_height="150dp"
       android:layout_marginLeft="110dp"
       android:layout_marginRight="30dp"
-      android:layout_marginTop="225dp" />
+
+      android:layout_marginTop="220dp" />
+
 
     <ImageView
       android:id="@+id/piyo"
       android:layout_width="150dp"
       android:layout_height="150dp"
       android:layout_marginLeft="50dp"
-      android:layout_marginTop="225dp" />
+      android:layout_marginTop="220dp" />
+
   </LinearLayout>
+
+  <Button
+    android:id="@+id/check_again"
+    android:layout_width="300dp"
+    android:layout_height="50dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="5dp"
+    android:text="もういちどダンスをみる" />
 
 
   <LinearLayout
@@ -53,6 +64,7 @@
       android:id="@+id/correct_lesson_list"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
       android:layout_weight="1"
       android:text="レッスンリストへ" />
 
@@ -60,6 +72,7 @@
       android:id="@+id/next_lesson"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_gravity="center_vertical"
       android:layout_weight="1"
       android:text="つぎのもんだいへ" />
   </LinearLayout>
