@@ -30,7 +30,7 @@ public class TitleActivity extends BaseActivity {
         Button startButton = (Button) findViewById(R.id.start_button);
         startButton.setVisibility(View.VISIBLE);
         Button freeButton = (Button) findViewById(R.id.free_button);
-        freeButton.setVisibility(View.VISIBLE);
+        freeButton.setVisibility(View.GONE);
         Button preButton = (Button) findViewById(R.id.pre_ques_button);
         preButton.setVisibility(View.VISIBLE);
         Button postButton = (Button) findViewById(R.id.post_ques_button);
