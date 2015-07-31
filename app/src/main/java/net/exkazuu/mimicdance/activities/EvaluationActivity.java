@@ -18,6 +18,7 @@ import net.exkazuu.mimicdance.Lessons;
 import net.exkazuu.mimicdance.R;
 import net.exkazuu.mimicdance.Timer;
 import net.exkazuu.mimicdance.interpreter.Interpreter;
+import net.exkazuu.mimicdance.models.LessonClear;
 import net.exkazuu.mimicdance.program.Block;
 import net.exkazuu.mimicdance.program.CodeParser;
 import net.exkazuu.mimicdance.program.UnrolledProgram;
@@ -195,6 +196,12 @@ public class EvaluationActivity extends BaseActivity {
 
                     if (piyoProgram.countDifferences(coccoProgram) + altPiyoProgram.countDifferences(altCoccoProgram) == 0) {
                         false_ans.setVisibility(View.GONE);
+                        LessonClear lessonClear = new LessonClear();
+                        lessonClear.lessonNumber = lessonNumber;
+                        lessonClear.milliseconds = Timer.stop();
+                        lessonClear.moveCount = DragViewListener.getMoveCount();
+                        lessonClear.save();
+                        DragViewListener.reset();
                         if (lessonNumber == Lessons.getLessonCount()) {
                             builder.setNegativeButton("タイトルへもどる",
                                 new DialogInterface.OnClickListener() {
@@ -206,7 +213,6 @@ public class EvaluationActivity extends BaseActivity {
                                     }
                                 });
                         } else {
-                            Timer.stop();
                             builder.setNegativeButton("つぎのレッスンにすすむ",
                                 new DialogInterface.OnClickListener() {
                                     @Override
