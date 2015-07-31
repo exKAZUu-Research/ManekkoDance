@@ -203,6 +203,20 @@ public class EvaluationActivity extends BaseActivity {
                         lessonClear.save();
                         DragViewListener.reset();
                         if (lessonNumber == Lessons.getLessonCount()) {
+                            builder.setPositiveButton("もういちどチャレンジ",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        startCodingActivity(lessonNumber, piyoCode, true);
+                                    }
+                                });
+                            builder.setNeutralButton("べつのレッスンをえらぶ",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        startLessonListActivity(true);
+                                    }
+                                });
                             builder.setNegativeButton("タイトルへもどる",
                                 new DialogInterface.OnClickListener() {
                                     @Override
@@ -213,6 +227,20 @@ public class EvaluationActivity extends BaseActivity {
                                     }
                                 });
                         } else {
+                            builder.setPositiveButton("もういちどチャレンジ",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        startCodingActivity(lessonNumber, piyoCode, true);
+                                    }
+                                });
+                            builder.setNeutralButton("べつのレッスンをえらぶ",
+                                new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        startLessonListActivity(true);
+                                    }
+                                });
                             builder.setNegativeButton("つぎのレッスンにすすむ",
                                 new DialogInterface.OnClickListener() {
                                     @Override
