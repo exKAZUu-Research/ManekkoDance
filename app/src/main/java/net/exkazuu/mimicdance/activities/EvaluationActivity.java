@@ -218,10 +218,17 @@ public class EvaluationActivity extends BaseActivity {
                         }
                     } else {
                         int diffCount = piyoProgram.countDifferences(coccoProgram);
+                        int size = coccoProgram.size();
                         if (Lessons.hasIf(lessonNumber)) {
                             diffCount += altPiyoProgram.countDifferences(altCoccoProgram);
+                            size += altCoccoProgram.size();
                         }
-                        builder.setTitle(diffCount + "コまちがっているよ");
+                        boolean almostCorrect = diffCount <= size / 3;
+                        if (almostCorrect) {
+                            builder.setTitle("おしい！！！ " + diffCount + "コまちがっているよ");
+                        } else {
+                            builder.setTitle(diffCount + "コまちがっているよ");
+                        }
                         true_ans.setVisibility(View.GONE);
                         congratulate.setVisibility(View.GONE);
                         builder.setPositiveButton("もういちどチャレンジ",
