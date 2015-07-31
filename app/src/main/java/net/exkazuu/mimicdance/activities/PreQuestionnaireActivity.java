@@ -3,35 +3,47 @@ package net.exkazuu.mimicdance.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
-import android.widget.ImageView;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.SeekBar;
 
-import net.exkazuu.mimicdance.Lessons;
 import net.exkazuu.mimicdance.R;
-import net.exkazuu.mimicdance.Timer;
-import net.exkazuu.mimicdance.models.LessonClear;
+import net.exkazuu.mimicdance.models.PreQuestionnaireResult;
 
 /**
  * Created by t-yokoi on 2015/07/31.
  */
 public class PreQuestionnaireActivity extends BaseActivity {
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); // タイトルバー非表示
         setContentView(R.layout.pre_questionnaire);
+    }
 
-        Button sendButton = (Button) findViewById(R.id.send_button);
-        sendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                
+    public void save() {
+        PreQuestionnaireResult result = new PreQuestionnaireResult();
+        result.examineeId = ((EditText) findViewById(R.id.examineeId)).getText().toString();
+        result.sex = ((RadioButton) findViewById(R.id.radioMale)).isChecked() ? "男" : "女";
+        try {
+            result.age = Integer.parseInt(((EditText) findViewById(R.id.age)).getText().toString());
+        } catch (Exception e) {
+        }
 
-            }
-        });
+        result.knowledgeOfProgramming = ((RadioButton) findViewById(R.id.radioYesProgramming)).isChecked();
+        result.knowledgeOfMimicDance = ((RadioButton) findViewById(R.id.radioYesMimicDance)).isChecked();
+
+        result.desireToLearn = ((SeekBar) findViewById(R.id.desireToLearn)).getProgress();
+        result.fun = ((SeekBar) findViewById(R.id.fun)).getProgress();
+        result.feasibility = ((SeekBar) findViewById(R.id.feasibility)).getProgress();
+        result.usefulness = ((SeekBar) findViewById(R.id.usefulness)).getProgress();
+
+        result.save();
+        startTitleActivity(true);
     }
 
     public void startTitleActivity(View view) {
-        startTitleActivity(false);
+        startTitleActivity(true);
     }
 
 }

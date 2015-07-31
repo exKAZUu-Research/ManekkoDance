@@ -45,7 +45,7 @@ public class CodeParser {
         assert firstLine.contains("もしも");
         Block trueBlock = parseBlock(lines, new String[]{"もしくは", "もしおわり"});
         Block falseBlock;
-        if (lines.get(lineIndex++).contains("もしくは")) {
+        if (lineIndex < lines.size() && lines.get(lineIndex++).contains("もしくは")) {
             falseBlock = parseBlock(lines, new String[]{"もしおわり"});
         } else {
             falseBlock = new Block();
@@ -72,7 +72,7 @@ public class CodeParser {
     }
 
     private static boolean readCondition(String conditionString) {
-        return !conditionString.contains("茶");
+        return !conditionString.contains("きいろ");
     }
 
     private static boolean contains(String line, String[] endLineTokens) {

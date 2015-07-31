@@ -13,7 +13,7 @@
     android:textSize="24sp" />
 
   <EditText
-    android:id="@+id/id"
+    android:id="@+id/examineeId"
     android:layout_width="50dp"
     android:layout_height="40dp"
     android:inputType="number" />
@@ -34,20 +34,20 @@
     android:orientation="horizontal">
 
     <RadioGroup
-      android:id="@+id/radio_group1"
+      android:id="@+id/sex"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:orientation="horizontal">
 
       <RadioButton
-        android:id="@+id/radio_button1_1"
+        android:id="@+id/radioMale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
         android:text="男" />
 
       <RadioButton
-        android:id="@+id/radio_button1_2"
+        android:id="@+id/radioFemale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
@@ -71,21 +71,21 @@
     android:textSize="24sp" />
 
   <RadioGroup
-    android:id="@+id/radio_group2"
+    android:id="@+id/knowledge_of_programming"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:orientation="horizontal">
 
     <RadioButton
-      android:id="@+id/radio_button2_1"
+      android:id="@+id/radioYesProgramming"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginRight="50dp"
       android:text="はい" />
 
     <RadioButton
-      android:id="@+id/radio_button2_2"
+      android:id="@+id/radio_no_programming"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginRight="50dp"
@@ -102,21 +102,21 @@
 
 
   <RadioGroup
-    android:id="@+id/radio_group3"
+    android:id="@+id/knowledge_of_mimicdance"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:orientation="horizontal">
 
     <RadioButton
-      android:id="@+id/radio_button3_1"
+      android:id="@+id/radioYesMimicDance"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginRight="50dp"
       android:text="はい" />
 
     <RadioButton
-      android:id="@+id/radio_button3_2"
+      android:id="@+id/radio_no_mimicdance"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_marginRight="50dp"
@@ -148,7 +148,7 @@
       android:textSize="16dp" />
 
     <SeekBar
-      android:id="@+id/interest"
+      android:id="@+id/desireToLearn"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
@@ -191,7 +191,7 @@
       android:textSize="16dp" />
 
     <SeekBar
-      android:id="@+id/enjoyable"
+      android:id="@+id/fun"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
@@ -233,7 +233,7 @@
       android:textSize="16dp" />
 
     <SeekBar
-      android:id="@+id/dekisou"
+      android:id="@+id/feasibility"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
@@ -267,7 +267,6 @@
     android:orientation="horizontal">
 
     <TextView
-      android:id="@+id/useful"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
@@ -277,6 +276,7 @@
       android:textSize="16dp" />
 
     <SeekBar
+      android:id="@+id/usefulness"
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="center_horizontal"
@@ -305,6 +305,7 @@
     android:orientation="horizontal">
 
     <Button
+      android:id="@+id/btnCancel"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_weight="1"
@@ -312,10 +313,11 @@
       android:text="キャンセル" />
 
     <Button
-      android:id="@+id/send_button"
+      android:id="@+id/btnSave"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_weight="1"
-      android:text="送信" />
+      android:onClick="save"
+      android:text="保存" />
   </LinearLayout>
 </LinearLayout>
