@@ -66,6 +66,7 @@ public class TitleActivity extends BaseActivity {
             for (LessonClear lessonClear : lessonClears) {
                 Map<String, Object> values = new HashMap<>();
                 values.put("androidId", androidId);
+                values.put("type", "豪華版");
                 values.put("created_at", lessonClear.created_at);
                 values.put("lessonNumber", lessonClear.lessonNumber);
                 values.put("seconds", lessonClear.milliseconds / 1000);
