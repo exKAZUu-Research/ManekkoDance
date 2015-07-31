@@ -133,7 +133,7 @@ public abstract class BaseActivity extends Activity {
         startActivity(intent);
     }
 
-    protected void startPreQuestionnaireActivity( boolean clear) {
+    protected void startPreQuestionnaireActivity(boolean clear) {
         Intent intent = new Intent(this, PreQuestionnaireActivity.class);
         if (clear) {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -141,14 +141,13 @@ public abstract class BaseActivity extends Activity {
         startActivity(intent);
     }
 
-    protected void startPostQuestionnaireActivity( boolean clear) {
+    protected void startPostQuestionnaireActivity(boolean clear) {
         Intent intent = new Intent(this, PostQuestionnaireActivity.class);
         if (clear) {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }
         startActivity(intent);
     }
-
 
     @Override
     protected void onResume() {
