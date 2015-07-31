@@ -6,9 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 
-/**
- * Created by t-yokoi on 2015/07/21.
- */
 public class PlugStateChangeReceiver extends BroadcastReceiver {
     private static IntentFilter plugIntentFilter = new IntentFilter(Intent.ACTION_HEADSET_PLUG);
     private static PlugStateChangeReceiver instance = null;

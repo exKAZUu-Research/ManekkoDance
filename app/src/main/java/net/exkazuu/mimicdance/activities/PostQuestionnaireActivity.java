@@ -10,9 +10,6 @@ import android.widget.SeekBar;
 import net.exkazuu.mimicdance.R;
 import net.exkazuu.mimicdance.models.PostQuestionnaireResult;
 
-/**
- * Created by t-yokoi on 2015/07/31.
- */
 public class PostQuestionnaireActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,7 +18,7 @@ public class PostQuestionnaireActivity extends BaseActivity {
 
     }
 
-    public void save() {
+    public void save(View view) {
         PostQuestionnaireResult result = new PostQuestionnaireResult();
         result.examineeId = ((EditText) findViewById(R.id.examineeId)).getText().toString();
 

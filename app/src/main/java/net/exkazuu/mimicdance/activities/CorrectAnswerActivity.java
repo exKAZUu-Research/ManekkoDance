@@ -59,7 +59,7 @@ public class CorrectAnswerActivity extends BaseActivity {
         });
 
         LessonClear lessonClear = new LessonClear();
-        List<LessonClear> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
+        List<PreQuestionnaireResult> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
         if (pre.size() == 1) {
             lessonClear.examineeId = pre.get(0).examineeId;
         }

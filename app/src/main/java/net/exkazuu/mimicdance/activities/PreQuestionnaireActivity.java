@@ -10,9 +10,6 @@ import android.widget.SeekBar;
 import net.exkazuu.mimicdance.R;
 import net.exkazuu.mimicdance.models.PreQuestionnaireResult;
 
-/**
- * Created by t-yokoi on 2015/07/31.
- */
 public class PreQuestionnaireActivity extends BaseActivity {
 
     public void onCreate(Bundle savedInstanceState) {
@@ -21,7 +18,7 @@ public class PreQuestionnaireActivity extends BaseActivity {
         setContentView(R.layout.pre_questionnaire);
     }
 
-    public void save() {
+    public void save(View view) {
         PreQuestionnaireResult result = new PreQuestionnaireResult();
         result.examineeId = ((EditText) findViewById(R.id.examineeId)).getText().toString();
         result.sex = ((RadioButton) findViewById(R.id.radioMale)).isChecked() ? "男" : "女";

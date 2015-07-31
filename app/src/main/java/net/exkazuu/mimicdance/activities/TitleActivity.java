@@ -2,10 +2,12 @@ package net.exkazuu.mimicdance.activities;
 
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import com.activeandroid.query.Delete;
 import com.activeandroid.query.Select;
 
 import net.exkazuu.mimicdance.R;
@@ -60,57 +62,64 @@ public class TitleActivity extends BaseActivity {
     }
 
     public void uploadData() {
+        List<LessonClear> lessonClears = new Select().from(LessonClear.class).orderBy("Created_at").execute();
+        List<PreQuestionnaireResult> preQuestionnaireResults = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at").execute();
+        List<PostQuestionnaireResult> postQuestionnaireResults = new Select().from(PostQuestionnaireResult.class).orderBy("Created_at").execute();
+        Log.d("upload", "lessonClears: " + lessonClears.size());
+        Log.d("upload", "preQuestionnaireResults: " + preQuestionnaireResults.size());
+        Log.d("upload", "postQuestionnaireResults: " + postQuestionnaireResults.size());
+        if (preQuestionnaireResults.size() == 0 || postQuestionnaireResults.size() == 0) {
+            return;
+        }
         try {
             Meteor meteor = new Meteor(this, "ws://mimic-dance-server.herokuapp.com/websocket");
-            List<LessonClear> lessonClears = new Select().from(LessonClear.class).orderBy("Created_at").execute();
-            for (LessonClear lessonClear : lessonClears) {
+            for (LessonClear item : lessonClears) {
                 Map<String, Object> values = new HashMap<>();
-                values.put("created_at", lessonClear.created_at);
-                values.put("examineeId", lessonClear.examineeId);
-                values.put("lessonNumber", lessonClear.lessonNumber);
-                values.put("seconds", lessonClear.milliseconds / 1000);
-                values.put("moveCount", lessonClear.moveCount);
+                values.put("created_at", item.created_at);
+                values.put("examineeId", item.examineeId);
+                values.put("lessonNumber", item.lessonNumber);
+                values.put("seconds", item.milliseconds / 1000);
+                values.put("moveCount", item.moveCount);
                 meteor.insert("PlayLogs", values);
             }
 
             String androidId = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
-            List<PreQuestionnaireResult> preQuestionnaireResults = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at").execute();
-            for (PreQuestionnaireResult preQuestionnaireResult : preQuestionnaireResults) {
+            for (PreQuestionnaireResult item : preQuestionnaireResults) {
                 Map<String, Object> values = new HashMap<>();
-                values.put("created_at", preQuestionnaireResult.created_at);
-                values.put("examineeId", preQuestionnaireResult.examineeId);
+                values.put("created_at", item.created_at);
+                values.put("examineeId", item.examineeId);
                 values.put("androidId", androidId);
                 values.put("type", "通常版");
-                values.put("sex", preQuestionnaireResult.sex);
-                values.put("age", preQuestionnaireResult.age);
-                values.put("knowledgeOfProgramming", preQuestionnaireResult.knowledgeOfProgramming);
-                values.put("knowledgeOfMimicDance", preQuestionnaireResult.knowledgeOfMimicDance);
-                values.put("desireToLearn", preQuestionnaireResult.desireToLearn);
-                values.put("fun", preQuestionnaireResult.fun);
-                values.put("feasibility", preQuestionnaireResult.feasibility);
-                values.put("usefulness", preQuestionnaireResult.usefulness);
+                values.put("sex", item.sex);
+                values.put("age", item.age);
+                values.put("knowledgeOfProgramming", item.knowledgeOfProgramming);
+                values.put("knowledgeOfMimicDance", item.knowledgeOfMimicDance);
+                values.put("desireToLearn", item.desireToLearn);
+                values.put("fun", item.fun);
+                values.put("feasibility", item.feasibility);
+                values.put("usefulness", item.usefulness);
                 meteor.insert("PreQuestionnaireResults", values);
             }
 
-            List<PostQuestionnaireResult> postQuestionnaireResults = new Select().from(PostQuestionnaireResult.class).orderBy("Created_at").execute();
-            for (PostQuestionnaireResult postQuestionnaireResult : postQuestionnaireResults) {
+            for (PostQuestionnaireResult item : postQuestionnaireResults) {
                 Map<String, Object> values = new HashMap<>();
-                values.put("created_at", postQuestionnaireResult.created_at);
-                values.put("examineeId", postQuestionnaireResult.examineeId);
-                values.put("gladness", postQuestionnaireResult.gladness);
-                values.put("vexation", postQuestionnaireResult.vexation);
-                values.put("desireToPlay", postQuestionnaireResult.desireToPlay);
-                values.put("additionalPlayTime", postQuestionnaireResult.additionalPlayTime);
-                values.put("desireToLearn", postQuestionnaireResult.desireToLearn);
-                values.put("fun", postQuestionnaireResult.fun);
-                values.put("feasibility", postQuestionnaireResult.feasibility);
-                values.put("usefulness", postQuestionnaireResult.usefulness);
-                values.put("opinion", postQuestionnaireResult.opinion);
+                values.put("created_at", item.created_at);
+                values.put("examineeId", item.examineeId);
+                values.put("gladness", item.gladness);
+                values.put("vexation", item.vexation);
+                values.put("desireToPlay", item.desireToPlay);
+                values.put("additionalPlayTime", item.additionalPlayTime);
+                values.put("desireToLearn", item.desireToLearn);
+                values.put("fun", item.fun);
+                values.put("feasibility", item.feasibility);
+                values.put("usefulness", item.usefulness);
+                values.put("opinion", item.opinion);
                 meteor.insert("PostQuestionnaireResults", values);
             }
-            //new Delete().from(LessonClear.class).execute();
-            //new Delete().from(PreQuestionnaireResult.class).execute();
-            //new Delete().from(PostQuestionnaireResult.class).execute();
+            Log.d("upload", "uploaded");
+            new Delete().from(LessonClear.class).execute();
+            new Delete().from(PreQuestionnaireResult.class).execute();
+            new Delete().from(PostQuestionnaireResult.class).execute();
         } catch (Exception e) {
         }
     }
