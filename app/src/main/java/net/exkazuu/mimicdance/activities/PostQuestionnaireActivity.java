@@ -1,6 +1,7 @@
 package net.exkazuu.mimicdance.activities;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 
 import net.exkazuu.mimicdance.R;
@@ -17,4 +18,9 @@ public class PostQuestionnaireActivity extends BaseActivity{
 
 
     }
+
+    public void startTitleActivity(View view) {
+        startTitleActivity(false);
+    }
+
 }
