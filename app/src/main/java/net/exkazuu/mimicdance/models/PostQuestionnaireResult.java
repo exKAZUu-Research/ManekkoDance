@@ -4,11 +4,13 @@ import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
-/**
- * Created by t-yokoi on 2015/08/01.
- */
+import java.util.Date;
+
 @Table(name = "PostQuestionnaireResult")
-public class PostQuestionnaireResult extends Model{
+public class PostQuestionnaireResult extends Model {
+    @Column(name = "Created_at")
+    public Date created_at = new Date(System.currentTimeMillis());
+
     @Column(name = "ExamineeId")
     public String examineeId;
 

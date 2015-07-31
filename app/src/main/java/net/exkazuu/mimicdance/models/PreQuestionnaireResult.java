@@ -4,8 +4,13 @@ import com.activeandroid.Model;
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
+import java.util.Date;
+
 @Table(name = "PreQuestionnaireResult")
 public class PreQuestionnaireResult extends Model {
+    @Column(name = "Created_at")
+    public Date created_at = new Date(System.currentTimeMillis());
+
     @Column(name = "ExamineeId")
     public String examineeId;
 

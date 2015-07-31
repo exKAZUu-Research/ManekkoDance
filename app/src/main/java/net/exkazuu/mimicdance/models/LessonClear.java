@@ -11,6 +11,9 @@ public class LessonClear extends Model {
     @Column(name = "Created_at")
     public Date created_at = new Date(System.currentTimeMillis());
 
+    @Column(name = "ExamineeId")
+    public String examineeId;
+
     @Column(name = "LessonNumber")
     public int lessonNumber;
 
