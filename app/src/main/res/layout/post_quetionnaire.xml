@@ -24,11 +24,12 @@
 
 
     <TextView
+      android:id="@+id/gladnessLebel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="1.正解したとき嬉しかったですか？(10が最高値)"
+      android:text="1.正解したとき嬉しかったですか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -67,11 +68,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/vexationLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="2.正解できなかったとき悔しかったですか？(10が最高値)"
+      android:text="2.正解できなかったとき悔しかったですか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -110,11 +112,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/desireToPlayLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="3.もっとアプリで遊びたいですか？(10が最高値)"
+      android:text="3.もっとアプリで遊びたいですか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -219,11 +222,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/desireToLearnLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="5.プログラミングを学びたいですか(10が最高値)"
+      android:text="5.プログラミングを学びたいですか(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -250,6 +254,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -262,11 +267,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/funLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="6.プログラミングは楽しそうですか(10が最高値)"
+      android:text="6.プログラミングは楽しそうですか(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -293,6 +299,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -305,11 +312,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/feasibilityLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="7.プログラミングはできそうですか(10が最高値)"
+      android:text="7.プログラミングはできそうですか(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -336,6 +344,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -348,11 +357,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/usefulnessLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="8.あなたにとってプログラミングのスキルは役立つと思いますか(10が最高値)"
+      android:text="8.あなたにとってプログラミングのスキルは役立つと思いますか(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -379,6 +389,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -421,9 +432,11 @@
         android:text="キャンセル" />
 
       <Button
+        android:id="@+id/btnSave"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:enabled="false"
         android:onClick="save"
         android:text="送信" />
     </LinearLayout>

@@ -3,9 +3,11 @@ package net.exkazuu.mimicdance.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import net.exkazuu.mimicdance.R;
 import net.exkazuu.mimicdance.models.PostQuestionnaireResult;
@@ -15,7 +17,46 @@ public class PostQuestionnaireActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); // タイトルバー非表示
         setContentView(R.layout.post_quetionnaire);
+        setOnSeekBarChangeListener(R.id.gladness, R.id.gladnessLebel, "1.正解したとき嬉しかったですか？");
+        setOnSeekBarChangeListener(R.id.vexation, R.id.vexationLabel, "2.正解できなかったとき悔しかったですか？");
+        setOnSeekBarChangeListener(R.id.desireToPlay, R.id.desireToPlayLabel, "3.もっとアプリで遊びたいですか？");
+        setOnSeekBarChangeListener(R.id.desireToLearn, R.id.desireToLearnLabel, "4.プログラミングを学びたいですか？");
+        setOnSeekBarChangeListener(R.id.fun, R.id.funLabel, "5.プログラミングは楽しそうですか？");
+        setOnSeekBarChangeListener(R.id.feasibility, R.id.feasibilityLabel, "6.プログラミングはできそうですか？");
+        setOnSeekBarChangeListener(R.id.usefulness, R.id.usefulnessLabel, "7.あなたにとってプログラミングのスキルは役立つと思いますか？");
+    }
 
+    public void setOnSeekBarChangeListener(int seekBarId, final int seekBarLabelId, final String before) {
+        final TextView seekBarLabel = ((TextView) findViewById(seekBarLabelId));
+        ((SeekBar) findViewById(seekBarId)).setOnSeekBarChangeListener(
+            new SeekBar.OnSeekBarChangeListener() {
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    seekBarLabel.setText(before + "(10が最高値, 現在は" + (seekBar.getProgress() + 1) + ")");
+                }
+
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                }
+
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                }
+            }
+        );
+    }
+
+    public boolean isSavable() {
+        if (((EditText) findViewById(R.id.examineeId)).getText().length() == 0) {
+            return false;
+        }
+        if (!((RadioButton) findViewById(R.id.radioTime0)).isChecked() && !((RadioButton) findViewById(R.id.radioTime15)).isChecked() ||
+            !((RadioButton) findViewById(R.id.radioTime30)).isChecked() && !((RadioButton) findViewById(R.id.radioTime45)).isChecked() ||
+            !((RadioButton) findViewById(R.id.radioTime60)).isChecked() && !((RadioButton) findViewById(R.id.radioTime120)).isChecked()) {
+            return false;
+        }
+        return true;
+    }
+
+    public void checkSavable(View view) {
+        ((Button) findViewById(R.id.btnSave)).setEnabled(isSavable());
     }
 
     public void save(View view) {

@@ -105,7 +105,7 @@
         android:text="はい" />
 
       <RadioButton
-        android:id="@+id/radio_no_programming"
+        android:id="@+id/radioNoProgramming"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
@@ -136,7 +136,7 @@
         android:text="はい" />
 
       <RadioButton
-        android:id="@+id/radio_no_mimicdance"
+        android:id="@+id/radioNoMimicdance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="50dp"
@@ -145,11 +145,12 @@
 
 
     <TextView
+      android:id="@+id/desireToLearnLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="4.プログラミングを学びたいですか？(10が最高値)"
+      android:text="4.プログラミングを学びたいですか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -176,6 +177,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -188,11 +190,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/funLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="5.プログラミングは楽しそうですか？(10が最高値)"
+      android:text="5.プログラミングは楽しそうですか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -218,6 +221,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -230,11 +234,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/feasibilityLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="6.プログラミングはできそうですか？(10が最高値)"
+      android:text="6.プログラミングはできそうですか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -261,6 +266,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -273,11 +279,12 @@
     </LinearLayout>
 
     <TextView
+      android:id="@+id/usefulnessLabel"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_marginLeft="10dp"
       android:layout_marginTop="10dp"
-      android:text="7.あなたにとってプログラミングのスキルは役立つと思いますか？(10が最高値)"
+      android:text="7.あなたにとってプログラミングのスキルは役立つと思いますか？(10が最高値, 現在は5)"
       android:textSize="24sp" />
 
     <LinearLayout
@@ -304,6 +311,7 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
+        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -337,6 +345,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:enabled="false"
         android:onClick="save"
         android:text="保存" />
     </LinearLayout>

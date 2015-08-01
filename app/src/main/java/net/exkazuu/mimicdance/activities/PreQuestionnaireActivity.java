@@ -3,9 +3,11 @@ package net.exkazuu.mimicdance.activities;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.SeekBar;
+import android.widget.TextView;
 
 import net.exkazuu.mimicdance.R;
 import net.exkazuu.mimicdance.models.PreQuestionnaireResult;
@@ -16,6 +18,52 @@ public class PreQuestionnaireActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); // タイトルバー非表示
         setContentView(R.layout.pre_questionnaire);
+        setOnSeekBarChangeListener(R.id.desireToLearn, R.id.desireToLearnLabel, "4.プログラミングを学びたいですか？");
+        setOnSeekBarChangeListener(R.id.fun, R.id.funLabel, "5.プログラミングは楽しそうですか？");
+        setOnSeekBarChangeListener(R.id.feasibility, R.id.feasibilityLabel, "6.プログラミングはできそうですか？");
+        setOnSeekBarChangeListener(R.id.usefulness, R.id.usefulnessLabel, "7.あなたにとってプログラミングのスキルは役立つと思いますか？");
+    }
+
+    public void setOnSeekBarChangeListener(int seekBarId, final int seekBarLabelId, final String before) {
+        final TextView seekBarLabel = ((TextView) findViewById(seekBarLabelId));
+        ((SeekBar) findViewById(seekBarId)).setOnSeekBarChangeListener(
+            new SeekBar.OnSeekBarChangeListener() {
+                public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                    seekBarLabel.setText(before + "(10が最高値, 現在は" + (seekBar.getProgress() + 1) + ")");
+                }
+
+                public void onStartTrackingTouch(SeekBar seekBar) {
+                }
+
+                public void onStopTrackingTouch(SeekBar seekBar) {
+                }
+            }
+        );
+    }
+
+    public boolean isSavable() {
+        if (((EditText) findViewById(R.id.examineeId)).getText().length() == 0) {
+            return false;
+        }
+        if (!((RadioButton) findViewById(R.id.radioMale)).isChecked() && !((RadioButton) findViewById(R.id.radioFemale)).isChecked()) {
+            return false;
+        }
+        try {
+            Integer.parseInt(((EditText) findViewById(R.id.age)).getText().toString());
+        } catch (Exception e) {
+            return false;
+        }
+        if (!((RadioButton) findViewById(R.id.radioYesProgramming)).isChecked() && !((RadioButton) findViewById(R.id.radioNoProgramming)).isChecked()) {
+            return false;
+        }
+        if (!((RadioButton) findViewById(R.id.radioYesMimicDance)).isChecked() && !((RadioButton) findViewById(R.id.radioNoMimicdance)).isChecked()) {
+            return false;
+        }
+        return true;
+    }
+
+    public void checkSavable(View view) {
+        ((Button) findViewById(R.id.btnSave)).setEnabled(isSavable());
     }
 
     public void save(View view) {
