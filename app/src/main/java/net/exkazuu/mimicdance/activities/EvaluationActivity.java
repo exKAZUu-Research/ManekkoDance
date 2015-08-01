@@ -201,23 +201,9 @@ public class EvaluationActivity extends BaseActivity {
 
                     if (piyoProgram.countDifferences(coccoProgram) + altPiyoProgram.countDifferences(altCoccoProgram) == 0) {
                         false_ans.setVisibility(View.GONE);
-                        LessonClear lessonClear = new LessonClear();
-                        List<PreQuestionnaireResult> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
-                        if (pre.size() == 1) {
-                            boolean isCelared = new Select().from(LessonClear.class)
-                                .where("ExamineeId = ?", pre.get(0).examineeId)
-                                .where("LessonNumber = ?", lessonNumber).limit(1).execute().size() > 0;
-                            if (!isCelared) {
-                                lessonClear.examineeId = pre.get(0).examineeId;
-                                lessonClear.lessonNumber = lessonNumber;
-                                lessonClear.milliseconds = Timer.stop();
-                                lessonClear.moveCount = DragViewListener.getMoveCount();
-                                lessonClear.save();
-                            }
-                        }
-                        DragViewListener.reset();
+                        LessonClear.createAndSave(lessonNumber);
                         if (lessonNumber == Lessons.getLessonCount()) {
-                            builder.setPositiveButton("もういちどチャレンジ",
+                            builder.setPositiveButton("もういちどダンス",
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -241,7 +227,7 @@ public class EvaluationActivity extends BaseActivity {
                                     }
                                 });
                         } else {
-                            builder.setPositiveButton("もういちどチャレンジ",
+                            builder.setPositiveButton("もういちどダンス",
                                 new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -279,7 +265,7 @@ public class EvaluationActivity extends BaseActivity {
                         }
                         true_ans.setVisibility(View.GONE);
                         congratulate.setVisibility(View.GONE);
-                        builder.setPositiveButton("もういちどチャレンジ",
+                        builder.setPositiveButton("もういちどダンス",
                             new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
