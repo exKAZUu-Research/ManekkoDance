@@ -13,15 +13,20 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.activeandroid.query.Select;
+
 import net.exkazuu.mimicdance.CharacterImageViewSet;
 import net.exkazuu.mimicdance.Lessons;
 import net.exkazuu.mimicdance.R;
 import net.exkazuu.mimicdance.Timer;
 import net.exkazuu.mimicdance.interpreter.Interpreter;
 import net.exkazuu.mimicdance.models.LessonClear;
+import net.exkazuu.mimicdance.models.PreQuestionnaireResult;
 import net.exkazuu.mimicdance.program.Block;
 import net.exkazuu.mimicdance.program.CodeParser;
 import net.exkazuu.mimicdance.program.UnrolledProgram;
+
+import java.util.List;
 
 public class EvaluationActivity extends BaseActivity {
 
@@ -197,10 +202,19 @@ public class EvaluationActivity extends BaseActivity {
                     if (piyoProgram.countDifferences(coccoProgram) + altPiyoProgram.countDifferences(altCoccoProgram) == 0) {
                         false_ans.setVisibility(View.GONE);
                         LessonClear lessonClear = new LessonClear();
-                        lessonClear.lessonNumber = lessonNumber;
-                        lessonClear.milliseconds = Timer.stop();
-                        lessonClear.moveCount = DragViewListener.getMoveCount();
-                        lessonClear.save();
+                        List<PreQuestionnaireResult> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
+                        if (pre.size() == 1) {
+                            boolean isCelared = new Select().from(LessonClear.class)
+                                .where("ExamineeId = ?", pre.get(0).examineeId)
+                                .where("LessonNumber = ?", lessonNumber).limit(1).execute().size() > 0;
+                            if (!isCelared) {
+                                lessonClear.examineeId = pre.get(0).examineeId;
+                                lessonClear.lessonNumber = lessonNumber;
+                                lessonClear.milliseconds = Timer.stop();
+                                lessonClear.moveCount = DragViewListener.getMoveCount();
+                                lessonClear.save();
+                            }
+                        }
                         DragViewListener.reset();
                         if (lessonNumber == Lessons.getLessonCount()) {
                             builder.setPositiveButton("もういちどチャレンジ",
