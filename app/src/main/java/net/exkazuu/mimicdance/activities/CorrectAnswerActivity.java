@@ -9,15 +9,9 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import com.activeandroid.query.Select;
-
 import net.exkazuu.mimicdance.Lessons;
 import net.exkazuu.mimicdance.R;
-import net.exkazuu.mimicdance.Timer;
 import net.exkazuu.mimicdance.models.LessonClear;
-import net.exkazuu.mimicdance.models.PreQuestionnaireResult;
-
-import java.util.List;
 
 public class CorrectAnswerActivity extends BaseActivity {
     AnimationDrawable coccoAnimation = null;
@@ -58,21 +52,7 @@ public class CorrectAnswerActivity extends BaseActivity {
             }
         });
 
-        LessonClear lessonClear = new LessonClear();
-        List<PreQuestionnaireResult> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
-        if (pre.size() == 1) {
-            boolean isCelared = new Select().from(LessonClear.class)
-                .where("ExamineeId = ?", pre.get(0).examineeId)
-                .where("LessonNumber = ?", lessonNumber).limit(1).execute().size() > 0;
-            if (!isCelared) {
-                lessonClear.examineeId = pre.get(0).examineeId;
-                lessonClear.lessonNumber = lessonNumber;
-                lessonClear.milliseconds = Timer.stop();
-                lessonClear.moveCount = DragViewListener.getMoveCount();
-                lessonClear.save();
-            }
-        }
-        DragViewListener.reset();
+        LessonClear.createAndSave(lessonNumber);
     }
 
     @Override
