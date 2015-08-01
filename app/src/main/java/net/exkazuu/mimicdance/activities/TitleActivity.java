@@ -19,12 +19,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import im.delight.android.ddp.Meteor;
+import im.delight.android.ddp.MeteorSingleton;
 
 public class TitleActivity extends BaseActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         requestWindowFeature(Window.FEATURE_NO_TITLE); // タイトルバー非表示
         setContentView(R.layout.title);
 
@@ -43,18 +44,22 @@ public class TitleActivity extends BaseActivity {
     }
 
     public void startHelpActivity(View view) {
+        uploadData();
         startHelpActivity(false);
     }
 
     public void startLessonListActivity(View view) {
+        uploadData();
         startLessonListActivity(true);
     }
 
     public void startPreQuestionnaireActivity(View view) {
+        uploadData();
         startPreQuestionnaireActivity(false);
     }
 
     public void startPostQuestionnaireActivity(View view) {
+        uploadData();
         startPostQuestionnaireActivity(false);
     }
 
@@ -62,6 +67,7 @@ public class TitleActivity extends BaseActivity {
     }
 
     public void uploadData() {
+        MeteorSingleton.getInstance().reconnect();
         List<LessonClear> lessonClears = new Select().from(LessonClear.class).orderBy("Created_at").execute();
         List<PreQuestionnaireResult> preQuestionnaireResults = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at").execute();
         List<PostQuestionnaireResult> postQuestionnaireResults = new Select().from(PostQuestionnaireResult.class).orderBy("Created_at").execute();
@@ -72,7 +78,9 @@ public class TitleActivity extends BaseActivity {
             return;
         }
         try {
-            Meteor meteor = new Meteor(this, "ws://mimic-dance-server.herokuapp.com/websocket");
+            if (!MeteorSingleton.getInstance().isConnected()) {
+                return;
+            }
             for (LessonClear item : lessonClears) {
                 Map<String, Object> values = new HashMap<>();
                 values.put("created_at", item.created_at);
@@ -80,7 +88,7 @@ public class TitleActivity extends BaseActivity {
                 values.put("lessonNumber", item.lessonNumber);
                 values.put("seconds", item.milliseconds / 1000);
                 values.put("moveCount", item.moveCount);
-                meteor.insert("PlayLogs", values);
+                MeteorSingleton.getInstance().insert("PlayLogs", values);
             }
 
             String androidId = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
@@ -98,7 +106,7 @@ public class TitleActivity extends BaseActivity {
                 values.put("fun", item.fun);
                 values.put("feasibility", item.feasibility);
                 values.put("usefulness", item.usefulness);
-                meteor.insert("PreQuestionnaireResults", values);
+                MeteorSingleton.getInstance().insert("PreQuestionnaireResults", values);
             }
 
             for (PostQuestionnaireResult item : postQuestionnaireResults) {
@@ -114,7 +122,7 @@ public class TitleActivity extends BaseActivity {
                 values.put("feasibility", item.feasibility);
                 values.put("usefulness", item.usefulness);
                 values.put("opinion", item.opinion);
-                meteor.insert("PostQuestionnaireResults", values);
+                MeteorSingleton.getInstance().insert("PostQuestionnaireResults", values);
             }
             Log.d("upload", "uploaded");
             new Delete().from(LessonClear.class).execute();

@@ -177,7 +177,6 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
-        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -221,7 +220,6 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
-        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -266,7 +264,6 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
-        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView
@@ -311,7 +308,6 @@
         android:layout_marginRight="10dp"
         android:layout_weight="9"
         android:max="9"
-        android:onClick="checkSavable"
         android:progress="4" />
 
       <TextView

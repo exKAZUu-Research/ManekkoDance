@@ -61,12 +61,17 @@ public class CorrectAnswerActivity extends BaseActivity {
         LessonClear lessonClear = new LessonClear();
         List<PreQuestionnaireResult> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
         if (pre.size() == 1) {
-            lessonClear.examineeId = pre.get(0).examineeId;
+            boolean isCelared = new Select().from(LessonClear.class)
+                .where("ExamineeId = ?", pre.get(0).examineeId)
+                .where("LessonNumber = ?", lessonNumber).limit(1).execute().size() > 0;
+            if (!isCelared) {
+                lessonClear.examineeId = pre.get(0).examineeId;
+                lessonClear.lessonNumber = lessonNumber;
+                lessonClear.milliseconds = Timer.stop();
+                lessonClear.moveCount = DragViewListener.getMoveCount();
+                lessonClear.save();
+            }
         }
-        lessonClear.lessonNumber = lessonNumber;
-        lessonClear.milliseconds = Timer.stop();
-        lessonClear.moveCount = DragViewListener.getMoveCount();
-        lessonClear.save();
         DragViewListener.reset();
     }
 

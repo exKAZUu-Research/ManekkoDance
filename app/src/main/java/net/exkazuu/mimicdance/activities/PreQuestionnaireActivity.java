@@ -1,6 +1,8 @@
 package net.exkazuu.mimicdance.activities;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
@@ -30,6 +32,7 @@ public class PreQuestionnaireActivity extends BaseActivity {
             new SeekBar.OnSeekBarChangeListener() {
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                     seekBarLabel.setText(before + "(10が最高値, 現在は" + (seekBar.getProgress() + 1) + ")");
+                    ((Button) findViewById(R.id.btnSave)).setEnabled(isSavable());
                 }
 
                 public void onStartTrackingTouch(SeekBar seekBar) {
@@ -39,6 +42,34 @@ public class PreQuestionnaireActivity extends BaseActivity {
                 }
             }
         );
+        ((EditText) findViewById(R.id.examineeId)).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ((Button) findViewById(R.id.btnSave)).setEnabled(isSavable());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
+        ((EditText) findViewById(R.id.age)).addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                ((Button) findViewById(R.id.btnSave)).setEnabled(isSavable());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+            }
+        });
     }
 
     public boolean isSavable() {

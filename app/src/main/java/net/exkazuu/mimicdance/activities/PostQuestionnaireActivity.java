@@ -32,6 +32,7 @@ public class PostQuestionnaireActivity extends BaseActivity {
             new SeekBar.OnSeekBarChangeListener() {
                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                     seekBarLabel.setText(before + "(10が最高値, 現在は" + (seekBar.getProgress() + 1) + ")");
+                    ((Button) findViewById(R.id.btnSave)).setEnabled(isSavable());
                 }
 
                 public void onStartTrackingTouch(SeekBar seekBar) {
@@ -47,8 +48,8 @@ public class PostQuestionnaireActivity extends BaseActivity {
         if (((EditText) findViewById(R.id.examineeId)).getText().length() == 0) {
             return false;
         }
-        if (!((RadioButton) findViewById(R.id.radioTime0)).isChecked() && !((RadioButton) findViewById(R.id.radioTime15)).isChecked() ||
-            !((RadioButton) findViewById(R.id.radioTime30)).isChecked() && !((RadioButton) findViewById(R.id.radioTime45)).isChecked() ||
+        if (!((RadioButton) findViewById(R.id.radioTime0)).isChecked() && !((RadioButton) findViewById(R.id.radioTime15)).isChecked() &&
+            !((RadioButton) findViewById(R.id.radioTime30)).isChecked() && !((RadioButton) findViewById(R.id.radioTime45)).isChecked() &&
             !((RadioButton) findViewById(R.id.radioTime60)).isChecked() && !((RadioButton) findViewById(R.id.radioTime120)).isChecked()) {
             return false;
         }
