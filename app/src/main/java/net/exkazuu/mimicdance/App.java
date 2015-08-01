@@ -9,6 +9,5 @@ public class App extends com.activeandroid.app.Application {
     public void onCreate() {
         super.onCreate();
         DeployGate.install(this);
-        MeteorSingleton.createInstance(this, "ws://mimic-dance-server.herokuapp.com/websocket");
     }
 }

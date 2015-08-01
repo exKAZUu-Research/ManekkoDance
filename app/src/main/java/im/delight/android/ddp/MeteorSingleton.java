@@ -58,6 +58,10 @@ public class MeteorSingleton extends Meteor implements MeteorCallback {
 		return mInstance;
 	}
 
+    public synchronized static boolean isCreated() {
+        return mInstance != null;
+    }
+
 	public synchronized static boolean hasInstance() {
 		return mInstance != null;
 	}

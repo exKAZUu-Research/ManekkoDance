@@ -25,6 +25,9 @@ public class TitleActivity extends BaseActivity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (!MeteorSingleton.isCreated()) {
+            MeteorSingleton.createInstance(this, "ws://mimic-dance-server.herokuapp.com/websocket");
+        }
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); // タイトルバー非表示
         setContentView(R.layout.title);
