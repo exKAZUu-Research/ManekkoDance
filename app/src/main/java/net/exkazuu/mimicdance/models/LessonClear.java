@@ -28,21 +28,20 @@ public class LessonClear extends Model {
     @Column(name = "MoveCount")
     public int moveCount;
 
+    @Column(name = "Sent")
+    public boolean sent;
+
     public static void createAndSave(int lessonNumber) {
         LessonClear lessonClear = new LessonClear();
         List<PreQuestionnaireResult> pre = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
-        if (pre.size() == 1) {
-            boolean isCelared = new Select().from(LessonClear.class)
-                .where("ExamineeId = ?", pre.get(0).examineeId)
-                .where("LessonNumber = ?", lessonNumber).limit(1).execute().size() > 0;
-            if (!isCelared) {
-                lessonClear.examineeId = pre.get(0).examineeId;
-                lessonClear.lessonNumber = lessonNumber;
-                lessonClear.milliseconds = Timer.stop();
-                lessonClear.moveCount = DragViewListener.getMoveCount();
-                lessonClear.save();
-            }
+        List<PostQuestionnaireResult> post = new Select().from(PostQuestionnaireResult.class).orderBy("Created_at DESC").limit(1).execute();
+        if (pre.size() == 1 && (post.size() == 0 || pre.get(0).examineeId != post.get(0).examineeId)) {
+            lessonClear.examineeId = pre.get(0).examineeId;
         }
+        lessonClear.lessonNumber = lessonNumber;
+        lessonClear.milliseconds = Timer.stop();
+        lessonClear.moveCount = DragViewListener.getMoveCount();
+        lessonClear.save();
         DragViewListener.reset();
     }
 }

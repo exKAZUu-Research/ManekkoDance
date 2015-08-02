@@ -40,4 +40,7 @@ public class PostQuestionnaireResult extends Model {
 
     @Column(name = "Opinion")
     public String opinion;
+
+    @Column(name = "Sent")
+    public boolean sent;
 }

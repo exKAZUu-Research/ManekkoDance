@@ -71,15 +71,12 @@ public class TitleActivity extends BaseActivity {
 
     public void uploadData() {
         MeteorSingleton.getInstance().reconnect();
-        List<LessonClear> lessonClears = new Select().from(LessonClear.class).orderBy("Created_at").execute();
-        List<PreQuestionnaireResult> preQuestionnaireResults = new Select().from(PreQuestionnaireResult.class).orderBy("Created_at").execute();
-        List<PostQuestionnaireResult> postQuestionnaireResults = new Select().from(PostQuestionnaireResult.class).orderBy("Created_at").execute();
+        List<LessonClear> lessonClears = new Select().from(LessonClear.class).where("Sent = ?", false).orderBy("Created_at").execute();
+        List<PreQuestionnaireResult> preQuestionnaireResults = new Select().from(PreQuestionnaireResult.class).where("Sent = ?", false).orderBy("Created_at").execute();
+        List<PostQuestionnaireResult> postQuestionnaireResults = new Select().from(PostQuestionnaireResult.class).where("Sent = ?", false).orderBy("Created_at").execute();
         Log.d("upload", "lessonClears: " + lessonClears.size());
         Log.d("upload", "preQuestionnaireResults: " + preQuestionnaireResults.size());
         Log.d("upload", "postQuestionnaireResults: " + postQuestionnaireResults.size());
-        if (preQuestionnaireResults.size() == 0 || postQuestionnaireResults.size() == 0) {
-            return;
-        }
         try {
             if (!MeteorSingleton.getInstance().isConnected()) {
                 return;
@@ -92,6 +89,8 @@ public class TitleActivity extends BaseActivity {
                 values.put("seconds", item.milliseconds / 1000);
                 values.put("moveCount", item.moveCount);
                 MeteorSingleton.getInstance().insert("PlayLogs", values);
+                item.sent = true;
+                item.save();
             }
 
             String androidId = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
@@ -110,6 +109,8 @@ public class TitleActivity extends BaseActivity {
                 values.put("feasibility", item.feasibility);
                 values.put("usefulness", item.usefulness);
                 MeteorSingleton.getInstance().insert("PreQuestionnaireResults", values);
+                item.sent = true;
+                item.save();
             }
 
             for (PostQuestionnaireResult item : postQuestionnaireResults) {
@@ -126,11 +127,10 @@ public class TitleActivity extends BaseActivity {
                 values.put("usefulness", item.usefulness);
                 values.put("opinion", item.opinion);
                 MeteorSingleton.getInstance().insert("PostQuestionnaireResults", values);
+                item.sent = true;
+                item.save();
             }
             Log.d("upload", "uploaded");
-            new Delete().from(LessonClear.class).execute();
-            new Delete().from(PreQuestionnaireResult.class).execute();
-            new Delete().from(PostQuestionnaireResult.class).execute();
         } catch (Exception e) {
         }
     }

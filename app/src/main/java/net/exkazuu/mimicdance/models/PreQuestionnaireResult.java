@@ -37,5 +37,8 @@ public class PreQuestionnaireResult extends Model {
 
     @Column(name = "Usefulness")
     public int usefulness;
+
+    @Column(name = "Sent")
+    public boolean sent;
 }
 
