@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="あなたの番号を入力してください"
+      android:textSize="24sp" />
+
+    <EditText
+      android:id="@+id/examineeId"
+      android:layout_width="50dp"
+      android:layout_height="40dp"
+      android:inputType="number" />
+
+
+    <TextView
+      android:id="@+id/gladnessLebel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="1.正解したとき嬉しかったですか？(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/gladness"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/vexationLabel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="2.正解できなかったとき悔しかったですか？(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/vexation"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/desireToPlayLabel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="3.もっとアプリで遊びたいですか？(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/desireToPlay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="4.あと何分遊びたいですか？"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:orientation="vertical">
+
+      <RadioGroup
+        android:id="@+id/additionalPlayTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+          android:id="@+id/radioTime0"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="30dp"
+          android:text="0分以上～15分未満" />
+
+        <RadioButton
+          android:id="@+id/radioTime15"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="30dp"
+          android:text="15分以上～30分未満" />
+
+        <RadioButton
+          android:id="@+id/radioTime30"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="30dp"
+          android:text="30分以上～45分未満" />
+
+        <RadioButton
+          android:id="@+id/radioTime45"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="30dp"
+          android:text="45分以上～60分未満" />
+
+        <RadioButton
+          android:id="@+id/radioTime60"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="30dp"
+          android:text="60分以上～120分" />
+
+        <RadioButton
+          android:id="@+id/radioTime120"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginRight="30dp"
+          android:text="120分以上" />
+
+      </RadioGroup>
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/desireToLearnLabel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="5.プログラミングを学びたいですか(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/desireToLearn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/funLabel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="6.プログラミングは楽しそうですか(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/fun"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/feasibilityLabel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="7.プログラミングはできそうですか(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/feasibility"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:onClick="checkSavable"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/usefulnessLabel"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="8.あなたにとってプログラミングのスキルは役立つと思いますか(10が最高値, 現在は5)"
+      android:textSize="24sp" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textSize="16dp" />
+
+      <SeekBar
+        android:id="@+id/usefulness"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="9"
+        android:max="9"
+        android:progress="4" />
+
+      <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:text="10"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="10dp"
+      android:layout_marginTop="10dp"
+      android:text="ご意見、ご感想、アプリの改善点などございましたら、ご記入ください。"
+      android:textSize="24sp" />
+
+    <EditText
+      android:id="@+id/opinion"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="ここへ記入してください。" />
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginBottom="10dp"
+      android:layout_marginLeft="10dp"
+      android:layout_marginRight="10dp"
+      android:layout_marginTop="10dp"
+      android:orientation="horizontal">
+
+      <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:onClick="startTitleActivity"
+        android:text="キャンセル" />
+
+      <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:enabled="false"
+        android:onClick="save"
+        android:text="送信" />
+    </LinearLayout>
+
+
+  </LinearLayout>
+</ScrollView>

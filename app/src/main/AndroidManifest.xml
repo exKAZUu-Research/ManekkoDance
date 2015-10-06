@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   package="net.exkazuu.mimicdance">
 
+  <uses-feature android:name="android.hardware.usb.accessory" />
+
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_LOGS" />
 
@@ -17,6 +19,13 @@
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
+      <intent-filter>
+        <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED" />
+      </intent-filter>
+
+      <meta-data
+        android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+        android:resource="@xml/accessory_filter" />
     </activity>
     <activity
       android:name=".activities.LessonListActivity"
@@ -43,5 +52,13 @@
     <activity
       android:name=".activities.WrongAnswerActivity"
       android:label="@string/wrong_answer"></activity>
+    <activity
+      android:name=".activities.PreQuestionnaireActivity"
+      android:label="@string/pre_questionnaire"></activity>
+    <activity
+      android:name=".activities.PostQuestionnaireActivity"
+      android:label="@string/post_questionnaire"></activity>
+
+
   </application>
 </manifest>

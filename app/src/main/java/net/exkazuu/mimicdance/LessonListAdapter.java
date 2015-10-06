@@ -27,7 +27,7 @@ public class LessonListAdapter extends ArrayAdapter<String> {
         TextView textView = (TextView) view;
         textView.setTextSize(36);
 
-        textView.setHeight(195);
+        textView.setHeight(167);//lesson6の場合は195で設定
         return view;
     }
 }

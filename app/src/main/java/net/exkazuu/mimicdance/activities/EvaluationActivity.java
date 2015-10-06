@@ -151,7 +151,7 @@ public class EvaluationActivity extends BaseActivity {
                     @Override
                     public void run() {
                         TextView whiteOrYellow = (TextView) findViewById(R.id.white_or_orange);
-                        whiteOrYellow.setText("きいろのひよこのばあい");
+                        whiteOrYellow.setText("きいろいひよこのばあい");
                         whiteOrYellow.setTextColor(0xFFFF3300);
 
                         FrameLayout altPiyoFrame = (FrameLayout) findViewById(R.id.alt_piyo);

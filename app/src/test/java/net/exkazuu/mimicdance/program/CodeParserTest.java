@@ -8,7 +8,7 @@ import org.robolectric.RobolectricGradleTestRunner;
 import org.robolectric.annotation.Config;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 @RunWith(RobolectricGradleTestRunner.class)
 @Config(constants = BuildConfig.class)
@@ -31,7 +31,7 @@ public class CodeParserTest {
 
     @Test
     public void parseIfProgram() {
-        String code = "右腕を上げる\nもしも黄色\n右腕を下げる\nもしくは\n左腕を上げる\nもしおわり";
+        String code = "右腕を上げる\nもしもしろ\n右腕を下げる\nもしくは\n左腕を上げる\nもしおわり";
         String unrolledNormalCode = "右腕を上げる\n右腕を下げる";
         String unrolledAltCode = "右腕を上げる\n左腕を上げる";
         Block block = CodeParser.parse(code);
@@ -40,8 +40,28 @@ public class CodeParserTest {
     }
 
     @Test
+    public void parseEmptyIfProgram() {
+        String code = "もしもしろ\nもしおわり";
+        String unrolledNormalCode = "";
+        String unrolledAltCode = "";
+        Block block = CodeParser.parse(code);
+        assertThat(block.unroll(true).getCode(), is(unrolledNormalCode));
+        assertThat(block.unroll(false).getCode(), is(unrolledAltCode));
+    }
+
+    @Test
+    public void parseIncompleteIfProgram() {
+        String code = "もしもしろ\n";
+        String unrolledNormalCode = "";
+        String unrolledAltCode = "";
+        Block block = CodeParser.parse(code);
+        assertThat(block.unroll(true).getCode(), is(unrolledNormalCode));
+        assertThat(block.unroll(false).getCode(), is(unrolledAltCode));
+    }
+
+    @Test
     public void parseLoopIfProgram() {
-        String code = "くりかえし2\nもしも茶色\n左腕を上げる\nもしくは\n右腕を上げる\n右腕を下げる\nもしおわり\nここまで";
+        String code = "くりかえし2\nもしもきいろ\n左腕を上げる\nもしくは\n右腕を上げる\n右腕を下げる\nもしおわり\nここまで";
         String unrolledNormalCode = "右腕を上げる\n右腕を下げる\n右腕を上げる\n右腕を下げる";
         String unrolledAltCode = "左腕を上げる\n\n左腕を上げる\n";
         Block block = CodeParser.parse(code);

@@ -13,12 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LessonListActivity extends ListActivity {
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        makeList();
-    }
-
     private void makeList() {
         List<String> lessonList = new ArrayList<>();
         int lessonCount = Lessons.getLessonCount();
@@ -44,15 +38,29 @@ public class LessonListActivity extends ListActivity {
     }
 
     @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        ArduinoManager.register(this);
+        makeList();
+    }
+
+    @Override
     protected void onResume() {
         super.onResume();
-        PlugStateChangeReceiver.register(this);
+        PlugManager.register(this);
+        ArduinoManager.resume();
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        PlugStateChangeReceiver.unregister(this);
+        PlugManager.unregister(this);
+        ArduinoManager.pause();
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        ArduinoManager.unregister(this);
+    }
 }

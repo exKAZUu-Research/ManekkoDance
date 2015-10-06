@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!--	Arduinoスケッチ AndroidAccessory acc()の第1, 第2, 第4引数と一致させるフィルタ指定 -->
+  <usb-accessory
+    manufacturer="Dorobook,Socym"
+    model="AdkLedOnOff"
+    version="1.0" />
+</resources>

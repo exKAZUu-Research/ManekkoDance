@@ -65,6 +65,9 @@
   <string name="close">とじる</string>
   <string name="cong">おめでとう！よくできました！！</string>
   <string name="send">データ送信</string>
+  <string name="pre_questionnaire">事前アンケート</string>
+  <string name="post_questionnaire">事後アンケート</string>
+
 
 
 </resources>
