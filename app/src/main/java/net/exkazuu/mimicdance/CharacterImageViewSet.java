@@ -53,11 +53,12 @@ public class CharacterImageViewSet {
     private void initializeImageViews(CharacterType charaType, Activity activity, BodyPartType[] bodyPartTypes) {
         for (int i = 0; i < bodyPartTypes.length; i++) {
             String name = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, charaType.name()) + bodyPartTypes[i].name();
-Log.i("charaType",charaType.name());
+            Log.i("charaType", charaType.name());
             int id = activity.getResources().getIdentifier(name, "id", activity.getPackageName());
             bodyParts[i] = (ImageView) activity.findViewById(id);
             if (i < bodyPartTypes.length - 1) {
-                String drawableName = CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, name) + "_up1";
+                String tname = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, CharacterType.getCurrentType().name().toLowerCase() + bodyPartTypes[i].name());
+                String drawableName = CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, tname) + "_up1";
                 int drawableId = activity.getResources().getIdentifier(drawableName, "drawable", activity.getPackageName());
                 bodyParts[i].setImageResource(drawableId);
                 bodyParts[i].setVisibility(View.VISIBLE);
@@ -81,6 +82,14 @@ Log.i("charaType",charaType.name());
         return new CharacterImageViewSet(CharacterType.AltCocco, activity);
     }
 
+    public static CharacterImageViewSet createBoLeft(Activity activity) {
+        return new CharacterImageViewSet(CharacterType.Bo, activity);
+    }
+
+    public static CharacterImageViewSet createBoRight(Activity activity) {
+        return new CharacterImageViewSet(CharacterType.AltBo, activity);
+    }
+
     public void changeToInitialImages() {
         changeToMovedImages(Lists.newArrayList(ActionType.LeftFootDown, ActionType.Jump.LeftHandDown,
             ActionType.RightFootDown, ActionType.RightHandDown));
@@ -89,7 +98,7 @@ Log.i("charaType",charaType.name());
     public void changeToMovingImages(Collection<ActionType> actions) {
         for (ActionType action : actions) {
             bodyParts[action.toBodyPart().ordinal()]
-                .setImageResource(firstImageIds[action.ordinal()][charaType.ordinal()]);
+                .setImageResource(firstImageIds[action.ordinal()][CharacterType.getCurrentType().ordinal()]);
         }
         if (actions.contains(ActionType.Jump)) {
             for (int i = 0; i < bodyParts.length - 1; i++) {
@@ -101,7 +110,7 @@ Log.i("charaType",charaType.name());
     public void changeToMovedImages(Collection<ActionType> actions) {
         for (ActionType actionType : actions) {
             bodyParts[actionType.toBodyPart().ordinal()]
-                .setImageResource(secondImageIds[actionType.ordinal()][charaType.ordinal()]);
+                .setImageResource(secondImageIds[actionType.ordinal()][CharacterType.getCurrentType().ordinal()]);
         }
         if (actions.contains(ActionType.Jump)) {
             for (int i = 0; i < bodyParts.length - 1; i++) {
@@ -111,7 +120,7 @@ Log.i("charaType",charaType.name());
     }
 
     public void changeToMovingErrorImage() {
-            if (charaType == CharacterType.Piyo) {
+        if (charaType == CharacterType.Piyo) {
 
             getBody().setImageResource(R.drawable.korobu_1);
         } else {
@@ -123,7 +132,7 @@ Log.i("charaType",charaType.name());
     }
 
     public void changeToMovedErrorImage() {
-            if (charaType == CharacterType.Piyo) {
+        if (charaType == CharacterType.Piyo) {
 
             getBody().setImageResource(R.drawable.korobu_3);
         } else {
