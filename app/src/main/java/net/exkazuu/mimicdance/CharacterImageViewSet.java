@@ -64,6 +64,11 @@ public class CharacterImageViewSet {
                 bodyParts[i].setVisibility(View.VISIBLE);
             }
         }
+        ImageView basicView = (ImageView) activity.findViewById(R.id.coccoBody);
+        String tname = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, CharacterType.getCurrentType().name().toLowerCase());
+        String drawableName = CaseFormat.LOWER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, tname) + "_basic";
+        int drawableId = activity.getResources().getIdentifier(drawableName, "drawable", activity.getPackageName());
+        basicView.setImageResource(drawableId);
     }
 
     public static CharacterImageViewSet createPiyoLeft(Activity activity) {

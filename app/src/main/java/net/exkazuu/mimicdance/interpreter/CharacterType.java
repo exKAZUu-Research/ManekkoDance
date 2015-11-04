@@ -12,12 +12,4 @@ public enum CharacterType {
         return currentType;
     }
 
-    private static boolean isPiyo() {
-        return currentType == Piyo;
-    }
-
-    private static boolean isBo() {
-        return currentType == Bo;
-    }
-
 }
