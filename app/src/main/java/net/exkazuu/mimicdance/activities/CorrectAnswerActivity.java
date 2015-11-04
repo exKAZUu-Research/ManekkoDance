@@ -11,6 +11,7 @@ import android.widget.ImageView;
 
 import net.exkazuu.mimicdance.Lessons;
 import net.exkazuu.mimicdance.R;
+import net.exkazuu.mimicdance.interpreter.CharacterType;
 import net.exkazuu.mimicdance.models.LessonClear;
 
 public class CorrectAnswerActivity extends BaseActivity {
@@ -67,8 +68,10 @@ public class CorrectAnswerActivity extends BaseActivity {
         coccoAnimation = new AnimationDrawable();
 
         // 画像の読み込み //
-        Drawable frame1 = con.getResources().getDrawable(R.drawable.cocco_jump1);
-        Drawable frame2 = con.getResources().getDrawable(R.drawable.cocco_jump2);
+        int jump1id = getResources().getIdentifier(CharacterType.getCurrentType().name().toLowerCase() + "_jump1", "drawable", getPackageName());
+        int jump2id = getResources().getIdentifier(CharacterType.getCurrentType().name().toLowerCase() + "_jump2", "drawable", getPackageName());
+        Drawable frame1 = con.getResources().getDrawable(jump1id);
+        Drawable frame2 = con.getResources().getDrawable(jump2id);
 
         // 画像をアニメーションのコマとして追加していく
         coccoAnimation.addFrame(frame1, 500);
@@ -88,8 +91,13 @@ public class CorrectAnswerActivity extends BaseActivity {
         piyoAnimation = new AnimationDrawable();
 
         // 画像の読み込み
-        Drawable frame1 = con.getResources().getDrawable(R.drawable.piyo_jump1);
-        Drawable frame2 = con.getResources().getDrawable(R.drawable.piyo_jump2);
+        CharacterType currentType = CharacterType.getCurrentType();
+        String currentTypeName = currentType == CharacterType.Cocco ? "piyo" : "bo";
+
+        int jump1id = getResources().getIdentifier(currentTypeName + "_jump1", "drawable", getPackageName());
+        int jump2id = getResources().getIdentifier(currentTypeName + "_jump2", "drawable", getPackageName());
+        Drawable frame1 = con.getResources().getDrawable(jump1id);
+        Drawable frame2 = con.getResources().getDrawable(jump2id);
 
         // 画像をアニメーションのコマとして追加していく
         piyoAnimation.addFrame(frame1, 500);

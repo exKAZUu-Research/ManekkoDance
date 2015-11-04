@@ -1,7 +1,6 @@
 package net.exkazuu.mimicdance.activities;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -13,6 +12,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import net.exkazuu.mimicdance.R;
+import net.exkazuu.mimicdance.interpreter.CharacterType;
 
 public class WrongAnswerActivity extends BaseActivity {
     AnimationDrawable altPiyoAnimation = null;
@@ -73,9 +73,16 @@ public class WrongAnswerActivity extends BaseActivity {
         altPiyoAnimation = new AnimationDrawable();
 
         // 画像の読み込み
-        Drawable frame1 = con.getResources().getDrawable(R.drawable.alt_korobu_1);
-        Drawable frame2 = con.getResources().getDrawable(R.drawable.alt_korobu_2);
-        Drawable frame3 = con.getResources().getDrawable(R.drawable.alt_korobu_3);
+        CharacterType currentType = CharacterType.getCurrentType();
+        String currentTypeName = currentType == CharacterType.Cocco ? "" : "bo_";
+
+        int korobu1id = getResources().getIdentifier(currentTypeName + "alt_korobu_1", "drawable", getPackageName());
+        int korobu2id = getResources().getIdentifier(currentTypeName + "alt_korobu_2", "drawable", getPackageName());
+        int korobu3id = getResources().getIdentifier(currentTypeName + "alt_korobu_3", "drawable", getPackageName());
+
+        Drawable frame1 = con.getResources().getDrawable(korobu1id);
+        Drawable frame2 = con.getResources().getDrawable(korobu2id);
+        Drawable frame3 = con.getResources().getDrawable(korobu3id);
 
         // 画像をアニメーションのコマとして追加していく
         altPiyoAnimation.addFrame(frame1, 1000);
@@ -94,10 +101,16 @@ public class WrongAnswerActivity extends BaseActivity {
     void showPiyoAnimationForWrongAnswer(Context con, View v) {
         piyoAnimation = new AnimationDrawable();
 
-        // 画像の読み込み
-        Drawable frame1 = con.getResources().getDrawable(R.drawable.korobu_1);
-        Drawable frame2 = con.getResources().getDrawable(R.drawable.korobu_2);
-        Drawable frame3 = con.getResources().getDrawable(R.drawable.korobu_3);
+        CharacterType currentType = CharacterType.getCurrentType();
+        String currentTypeName = currentType == CharacterType.Cocco ? "" : "bo_";
+
+        int korobu1id = getResources().getIdentifier(currentTypeName + "korobu_1", "drawable", getPackageName());
+        int korobu2id = getResources().getIdentifier(currentTypeName + "korobu_2", "drawable", getPackageName());
+        int korobu3id = getResources().getIdentifier(currentTypeName + "korobu_3", "drawable", getPackageName());
+
+        Drawable frame1 = con.getResources().getDrawable(korobu1id);
+        Drawable frame2 = con.getResources().getDrawable(korobu2id);
+        Drawable frame3 = con.getResources().getDrawable(korobu3id);
 
         // 画像をアニメーションのコマとして追加していく
         piyoAnimation.addFrame(frame1, 1000);

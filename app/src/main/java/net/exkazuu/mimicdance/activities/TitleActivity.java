@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.activeandroid.query.Select;
 
 import net.exkazuu.mimicdance.R;
+import net.exkazuu.mimicdance.interpreter.CharacterType;
 import net.exkazuu.mimicdance.models.LessonClear;
 import net.exkazuu.mimicdance.models.PostQuestionnaireResult;
 import net.exkazuu.mimicdance.models.PreQuestionnaireResult;
@@ -90,6 +91,14 @@ public class TitleActivity extends BaseActivity {
         builder.setTitle("chara");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
+                switch (which) {
+                    case 0:
+                        CharacterType.setCocco();
+                        break;
+                    case 1:
+                        CharacterType.setBo();
+                        break;
+                }
                 // リスト選択時の処理
                 // which は、選択されたアイテムのインデックス
             }
