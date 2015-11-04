@@ -43,6 +43,17 @@
     android:visibility="gone" />
 
   <Button
+    android:id="@+id/chara_button"
+    android:layout_width="wrap_content"
+    android:layout_height="60dp"
+    android:layout_above="@id/help_button"
+    android:layout_marginBottom="22dp"
+    android:onClick="charaDialog"
+    android:text="@string/Title_chara_button"
+    android:textSize="24sp"
+    android:visibility="visible" />
+
+  <Button
     android:id="@+id/post_ques_button"
     android:layout_width="wrap_content"
     android:layout_height="60dp"

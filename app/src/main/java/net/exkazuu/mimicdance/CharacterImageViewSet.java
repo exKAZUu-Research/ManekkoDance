@@ -1,6 +1,7 @@
 package net.exkazuu.mimicdance;
 
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -42,6 +43,7 @@ public class CharacterImageViewSet {
                 String actionName = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, action.name());
                 String firstName = prefix + actionName.replace("down", "up") + "2";
                 String secondName = prefix + actionName.replace("up", "up3").replace("down", "up1").replace("jump", "basic");
+
                 firstImageIds[i][j] = activity.getResources().getIdentifier(firstName, "drawable", activity.getPackageName());
                 secondImageIds[i][j] = activity.getResources().getIdentifier(secondName, "drawable", activity.getPackageName());
             }
@@ -51,6 +53,7 @@ public class CharacterImageViewSet {
     private void initializeImageViews(CharacterType charaType, Activity activity, BodyPartType[] bodyPartTypes) {
         for (int i = 0; i < bodyPartTypes.length; i++) {
             String name = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_CAMEL, charaType.name()) + bodyPartTypes[i].name();
+Log.i("charaType",charaType.name());
             int id = activity.getResources().getIdentifier(name, "id", activity.getPackageName());
             bodyParts[i] = (ImageView) activity.findViewById(id);
             if (i < bodyPartTypes.length - 1) {
@@ -108,7 +111,8 @@ public class CharacterImageViewSet {
     }
 
     public void changeToMovingErrorImage() {
-        if (charaType == CharacterType.Piyo) {
+            if (charaType == CharacterType.Piyo) {
+
             getBody().setImageResource(R.drawable.korobu_1);
         } else {
             getBody().setImageResource(R.drawable.alt_korobu_1);
@@ -119,7 +123,8 @@ public class CharacterImageViewSet {
     }
 
     public void changeToMovedErrorImage() {
-        if (charaType == CharacterType.Piyo) {
+            if (charaType == CharacterType.Piyo) {
+
             getBody().setImageResource(R.drawable.korobu_3);
         } else {
             getBody().setImageResource(R.drawable.alt_korobu_3);

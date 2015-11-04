@@ -3,6 +3,7 @@ package net.exkazuu.mimicdance.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -64,6 +65,7 @@ public class CoccoActivity extends BaseActivity {
     }
 
     private void initializeComponents() {
+        Log.i("initializeComponents()", "CoccoActivity.java");
         coccoViewSet = CharacterImageViewSet.createCoccoLeft(this);
         altCoccoViewSet = CharacterImageViewSet.createCoccoRight(this);
 
@@ -112,6 +114,7 @@ public class CoccoActivity extends BaseActivity {
 
         @Override
         public void run() {
+            Log.i("run()", "CoccoActivity.java");
             Interpreter coccoExecutor = Interpreter.createForCocco(coccoProgram, coccoViewSet);
             Interpreter altCoccoExecutor = Interpreter.createForCocco(altCoccoProgram, altCoccoViewSet);
             while (!(coccoExecutor.finished() && altCoccoExecutor.finished())) {

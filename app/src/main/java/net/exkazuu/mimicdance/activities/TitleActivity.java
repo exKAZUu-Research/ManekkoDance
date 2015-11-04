@@ -1,5 +1,6 @@
 package net.exkazuu.mimicdance.activities;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -80,6 +81,13 @@ public class TitleActivity extends BaseActivity {
     public void startPostQuestionnaireActivity(View view) {
         uploadData();
         startPostQuestionnaireActivity(false);
+    }
+
+    public void charaDialog (View view){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("chara");
+        builder.setPositiveButton("OK",null);
+        builder.create().show();
     }
 
     public void freePlay(View view) {
