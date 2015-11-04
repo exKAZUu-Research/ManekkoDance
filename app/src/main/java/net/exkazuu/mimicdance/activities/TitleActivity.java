@@ -1,6 +1,7 @@
 package net.exkazuu.mimicdance.activities;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
@@ -83,10 +84,17 @@ public class TitleActivity extends BaseActivity {
         startPostQuestionnaireActivity(false);
     }
 
-    public void charaDialog (View view){
+    public void charaDialog(View view) {
+        final String[] items = {"ひよこ", "棒"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("chara");
-        builder.setPositiveButton("OK",null);
+        builder.setItems(items, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                // リスト選択時の処理
+                // which は、選択されたアイテムのインデックス
+            }
+        });
+        builder.setPositiveButton("OK", null);
         builder.create().show();
     }
 
