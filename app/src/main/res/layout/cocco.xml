@@ -55,7 +55,7 @@
         android:visibility="visible" />
 
       <ImageView
-        android:id="@+id/coccoBody"
+        android:id="@+id/coccoBasic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/image_area"
@@ -106,7 +106,7 @@
         android:visibility="visible" />
 
       <ImageView
-        android:id="@+id/altCoccoBody"
+        android:id="@+id/altCoccoBasic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:contentDescription="@string/image_area"

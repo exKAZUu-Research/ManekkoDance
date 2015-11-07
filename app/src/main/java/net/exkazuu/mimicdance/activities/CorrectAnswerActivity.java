@@ -1,6 +1,5 @@
 package net.exkazuu.mimicdance.activities;
 
-import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -15,8 +14,9 @@ import net.exkazuu.mimicdance.interpreter.CharacterType;
 import net.exkazuu.mimicdance.models.LessonClear;
 
 public class CorrectAnswerActivity extends BaseActivity {
-    AnimationDrawable coccoAnimation = null;
-    AnimationDrawable piyoAnimation = null;
+    public static final int DURATION = 500;
+    private AnimationDrawable coccoAnimation = null;
+    private AnimationDrawable piyoAnimation = null;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +28,8 @@ public class CorrectAnswerActivity extends BaseActivity {
         ImageView jumpCocco = (ImageView) findViewById(R.id.cocco);
         ImageView jumpPiyo = (ImageView) findViewById(R.id.piyo);
 
-        startCoccoAnimation(this, jumpCocco);
-        startPiyoAnimation(this, jumpPiyo);
+        startTeacherAnimation(jumpCocco);
+        startPiyoAnimation(jumpPiyo);
 
         Button again = (Button) findViewById(R.id.check_again);
         Button list = (Button) findViewById(R.id.correct_lesson_list);
@@ -64,52 +64,41 @@ public class CorrectAnswerActivity extends BaseActivity {
         finish();
     }
 
-    void startCoccoAnimation(Context con, View v) {
+    private void startTeacherAnimation(View v) {
         coccoAnimation = new AnimationDrawable();
 
-        // 画像の読み込み //
-        int jump1id = getResources().getIdentifier(CharacterType.getCurrentType().name().toLowerCase() + "_jump1", "drawable", getPackageName());
-        int jump2id = getResources().getIdentifier(CharacterType.getCurrentType().name().toLowerCase() + "_jump2", "drawable", getPackageName());
-        Drawable frame1 = con.getResources().getDrawable(jump1id);
-        Drawable frame2 = con.getResources().getDrawable(jump2id);
-
-        // 画像をアニメーションのコマとして追加していく
-        coccoAnimation.addFrame(frame1, 500);
-        coccoAnimation.addFrame(frame2, 500);
-
-        // 繰り返し設定
-        coccoAnimation.setOneShot(false);
-
-        // ビューの背景画像にアニメーションを設定
-        v.setBackgroundDrawable(coccoAnimation);
-
-        // アニメーション開始
-        coccoAnimation.start();
+        // 画像の読み込み
+        String characterNamePrefix = CharacterType.getCharacters()[2].name().toLowerCase();
+        int jump1id = getResources().getIdentifier(characterNamePrefix + "_jump1", "drawable", getPackageName());
+        int jump2id = getResources().getIdentifier(characterNamePrefix + "_jump2", "drawable", getPackageName());
+        setAnimation(v, jump1id, jump2id, coccoAnimation);
     }
 
-    void startPiyoAnimation(Context con, View v) {
+    private void setAnimation(View v, int jump1id, int jump2id, AnimationDrawable animation) {
+        Drawable frame1 = getResources().getDrawable(jump1id);
+        Drawable frame2 = getResources().getDrawable(jump2id);
+
+        // 画像をアニメーションのコマとして追加していく
+        animation.addFrame(frame1, DURATION);
+        animation.addFrame(frame2, DURATION);
+
+        // 繰り返し設定
+        animation.setOneShot(false);
+
+        // ビューの背景画像にアニメーションを設定
+        v.setBackgroundDrawable(animation);
+
+        // アニメーション開始
+        animation.start();
+    }
+
+    private void startPiyoAnimation(View v) {
         piyoAnimation = new AnimationDrawable();
 
         // 画像の読み込み
-        CharacterType currentType = CharacterType.getCurrentType();
-        String currentTypeName = currentType == CharacterType.Cocco ? "piyo" : "bo";
-
-        int jump1id = getResources().getIdentifier(currentTypeName + "_jump1", "drawable", getPackageName());
-        int jump2id = getResources().getIdentifier(currentTypeName + "_jump2", "drawable", getPackageName());
-        Drawable frame1 = con.getResources().getDrawable(jump1id);
-        Drawable frame2 = con.getResources().getDrawable(jump2id);
-
-        // 画像をアニメーションのコマとして追加していく
-        piyoAnimation.addFrame(frame1, 500);
-        piyoAnimation.addFrame(frame2, 500);
-
-        // 繰り返し設定
-        piyoAnimation.setOneShot(false);
-
-        // ビューの背景画像にアニメーションを設定
-        v.setBackgroundDrawable(piyoAnimation);
-
-        // アニメーション開始
-        piyoAnimation.start();
+        String characterNamePrefix = CharacterType.getCharacters()[0].name().toLowerCase();
+        int jump1id = getResources().getIdentifier(characterNamePrefix + "_jump1", "drawable", getPackageName());
+        int jump2id = getResources().getIdentifier(characterNamePrefix + "_jump2", "drawable", getPackageName());
+        setAnimation(v, jump1id, jump2id, piyoAnimation);
     }
 }

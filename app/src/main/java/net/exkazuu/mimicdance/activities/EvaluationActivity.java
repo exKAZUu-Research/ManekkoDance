@@ -3,7 +3,6 @@ package net.exkazuu.mimicdance.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -82,10 +81,10 @@ public class EvaluationActivity extends BaseActivity {
         TextView playerEditText = (TextView) findViewById(R.id.txtStringCode);
         playerEditText.setText(piyoCode);
 
-        piyoViewSet = CharacterImageViewSet.createPiyoLeft(this);
-        altPiyoViewSet = CharacterImageViewSet.createPiyoRight(this);
-        coccoViewSet = CharacterImageViewSet.createCoccoLeft(this);
-        altCoccoViewSet = CharacterImageViewSet.createCoccoRight(this);
+        piyoViewSet = CharacterImageViewSet.createStudentLeft(this);
+        altPiyoViewSet = CharacterImageViewSet.createStudentRight(this);
+        coccoViewSet = CharacterImageViewSet.createTeacherLeft(this);
+        altCoccoViewSet = CharacterImageViewSet.createTeacherRight(this);
 
         Button button = (Button) this.findViewById(R.id.button1);
         button.setOnClickListener(new View.OnClickListener() {

@@ -66,8 +66,8 @@ public class CoccoActivity extends BaseActivity {
 
     private void initializeComponents() {
         Log.i("initializeComponents()", "CoccoActivity.java");
-        coccoViewSet = CharacterImageViewSet.createCoccoLeft(this);
-        altCoccoViewSet = CharacterImageViewSet.createCoccoRight(this);
+        coccoViewSet = CharacterImageViewSet.createTeacherLeft(this);
+        altCoccoViewSet = CharacterImageViewSet.createTeacherRight(this);
 
         Button btnShowCocco = (Button) this.findViewById(R.id.btnShowCocco);
         btnShowCocco.setOnClickListener(new View.OnClickListener() {

@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.activeandroid.query.Select;
 
 import net.exkazuu.mimicdance.R;
+import net.exkazuu.mimicdance.interpreter.CharacterTheme;
 import net.exkazuu.mimicdance.interpreter.CharacterType;
 import net.exkazuu.mimicdance.models.LessonClear;
 import net.exkazuu.mimicdance.models.PostQuestionnaireResult;
@@ -35,20 +36,6 @@ public class TitleActivity extends BaseActivity {
 
         requestWindowFeature(Window.FEATURE_NO_TITLE); // タイトルバー非表示
         setContentView(R.layout.title);
-
-        Button helpButton = (Button) findViewById(R.id.help_button);
-        helpButton.setVisibility(View.VISIBLE);
-        Button startButton = (Button) findViewById(R.id.start_button);
-        startButton.setVisibility(View.VISIBLE);
-        Button freeButton = (Button) findViewById(R.id.free_button);
-        freeButton.setVisibility(View.GONE);
-        Button preButton = (Button) findViewById(R.id.pre_ques_button);
-        preButton.setVisibility(View.VISIBLE);
-        Button postButton = (Button) findViewById(R.id.post_ques_button);
-        postButton.setVisibility(View.VISIBLE);
-
-        Button kumaBottun = (Button) findViewById(R.id.kuma_test);
-        kumaBottun.setVisibility(View.VISIBLE);
 
         uploadData();
     }
@@ -86,24 +73,14 @@ public class TitleActivity extends BaseActivity {
     }
 
     public void charaDialog(View view) {
-        final String[] items = {"ひよこ", "棒"};
+        final String[] items = CharacterTheme.getThemeValues();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("chara");
+        builder.setTitle("テーマ選択");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
-                switch (which) {
-                    case 0:
-                        CharacterType.setCocco();
-                        break;
-                    case 1:
-                        CharacterType.setBo();
-                        break;
-                }
-                // リスト選択時の処理
-                // which は、選択されたアイテムのインデックス
+                CharacterTheme.setCharacterTheme(which);
             }
         });
-        builder.setPositiveButton("OK", null);
         builder.create().show();
     }
 

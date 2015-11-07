@@ -58,7 +58,7 @@ public enum ActionType {
             }
         }
         // When jumping, another body part cannot move
-        if (part2count[BodyPartType.Body.ordinal()] > 0 && handOrFootCount > 0) {
+        if (part2count[BodyPartType.Basic.ordinal()] > 0 && handOrFootCount > 0) {
             return false;
         }
         return true;

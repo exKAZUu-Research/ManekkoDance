@@ -15,11 +15,11 @@
     android:onClick="debugKuma"
     android:text="クマ動作"
     android:textSize="24sp"
-    android:visibility="visible" />
+    android:visibility="gone" />
 
 
   <Button
-    android:id="@+id/help_button"
+    android:id="@+id/start_button"
     android:layout_width="150dp"
     android:layout_height="60dp"
     android:layout_alignParentBottom="true"
@@ -28,25 +28,26 @@
     android:onClick="startLessonListActivity"
     android:text="@string/Title_start_button"
     android:textSize="24sp"
-    android:visibility="gone" />
+    android:visibility="visible" />
 
   <Button
-    android:id="@+id/start_button"
+    android:id="@+id/help_button"
     android:layout_width="150dp"
     android:layout_height="60dp"
-    android:layout_above="@id/help_button"
-    android:layout_alignLeft="@id/help_button"
+    android:layout_above="@id/start_button"
+    android:layout_centerHorizontal="true"
     android:layout_marginBottom="22dp"
     android:onClick="startHelpActivity"
     android:text="@string/Title_how_to_play"
     android:textSize="24sp"
-    android:visibility="gone" />
+    android:visibility="visible" />
 
   <Button
     android:id="@+id/chara_button"
     android:layout_width="wrap_content"
     android:layout_height="60dp"
     android:layout_above="@id/help_button"
+    android:layout_centerHorizontal="true"
     android:layout_marginBottom="22dp"
     android:onClick="charaDialog"
     android:text="@string/Title_chara_button"
@@ -63,7 +64,7 @@
     android:onClick="startPostQuestionnaireActivity"
     android:text="@string/post_questionnaire"
     android:textSize="24sp"
-    android:visibility="visible" />
+    android:visibility="gone" />
 
   <Button
     android:id="@+id/pre_ques_button"
@@ -75,7 +76,7 @@
     android:onClick="startPreQuestionnaireActivity"
     android:text="@string/pre_questionnaire"
     android:textSize="24sp"
-    android:visibility="visible" />
+    android:visibility="gone" />
 
   <Button
     android:id="@+id/free_button"
