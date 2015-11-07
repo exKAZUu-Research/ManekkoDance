@@ -31,14 +31,18 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="prev"
+      android:textSize="24sp"
       android:text="@string/arrow_left" />
 
-    <EditText
+    <TextView
       android:id="@+id/page"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:ems="10"
+      android:textSize="36sp"
+      android:gravity="center"
+      android:textColor="@android:color/white"
       android:focusable="false"
       android:focusableInTouchMode="false" />
 
@@ -48,6 +52,7 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="next"
+      android:textSize="24sp"
       android:text="@string/arrow_right" />
 
     <Button
@@ -56,6 +61,7 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="close"
+      android:textSize="24sp"
       android:text="@string/close" />
 
   </TableRow>

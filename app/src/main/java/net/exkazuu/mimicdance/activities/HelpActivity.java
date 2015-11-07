@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import net.exkazuu.mimicdance.R;
 
@@ -42,7 +43,7 @@ public class HelpActivity extends BaseActivity {
     }
 
     public void updatePageNumber() {
-        EditText pageText = (EditText) findViewById(R.id.page);
+        TextView pageText = (TextView) findViewById(R.id.page);
         pageText.setText((pageNumber + 1) + PAGE_SUFFIX);
 
         ImageView helpView = (ImageView) findViewById(R.id.helpImage);

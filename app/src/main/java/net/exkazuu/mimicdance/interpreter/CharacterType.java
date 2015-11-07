@@ -6,7 +6,7 @@ import net.exkazuu.mimicdance.exception.UnKnownCharacterThemeException;
  * Created by exKAZUu on 2015/05/30.
  */
 public enum CharacterType {
-    Piyo, AltPiyo, Cocco, AltCocco, Bo, AltBo, Boy, AltBoy, Girl, AltGirl, Graph, AltGraph;
+    Piyo, AltPiyo, Cocco, AltCocco, Bo, AltBo, Boy, AltBoy, Girl, AltGirl;
 
     private static CharacterType[] getCharacters() {
         switch (CharacterTheme.getCurrentTheme()) {
@@ -18,8 +18,6 @@ public enum CharacterType {
                 return new CharacterType[]{Boy, AltBoy, Girl, AltGirl};
             case BoyToGirl:
                 return new CharacterType[]{Girl, AltGirl, Boy, AltBoy};
-            case Graphic:
-                return new CharacterType[]{Graph, AltGraph, Graph, AltGraph};
             default:
                 throw new UnKnownCharacterThemeException(CharacterTheme.getCurrentTheme());
         }

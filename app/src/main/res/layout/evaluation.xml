@@ -42,8 +42,9 @@
   <Button
     android:id="@+id/button1"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/hantei" />
+    android:layout_height="70dp"
+    android:text="@string/hantei"
+    android:textSize="24sp" />
 
   <TextView
     android:id="@+id/white_or_orange"
@@ -252,7 +253,7 @@
 
   <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="80dp"
     android:background="#ff81ff">
 
     <Button
@@ -261,7 +262,8 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="startCoccoActivity"
-      android:text="@string/look_answer_button2" />
+      android:text="@string/look_answer_button2"
+      android:textSize="24sp" />
 
     <Button
       android:id="@+id/button3"
@@ -269,7 +271,8 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="startCodingActivity"
-      android:text="@string/player_screen" />
+      android:text="@string/player_screen"
+      android:textSize="24sp" />
   </LinearLayout>
 
 

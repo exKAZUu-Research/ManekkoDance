@@ -5,7 +5,7 @@ package net.exkazuu.mimicdance.interpreter;
  */
 public enum CharacterTheme {
     Chicken, StickFig, GirlToBoy, BoyToGirl, Graphic;
-    private static String[] themeValues = {"ひよことにわとり", "棒人間", "男の子と女の子", "女の子と男の子", "図形"};
+    private static String[] themeValues = {"ひよことにわとり", "棒人間", "男の子と女の子", "女の子と男の子"};
     private static CharacterTheme currentTheme = Chicken;
 
     public static String[] getThemeValues() {

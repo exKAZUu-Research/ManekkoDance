@@ -745,7 +745,7 @@
   <LinearLayout
     android:id="@+id/buttonGroup2"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="80dp"
     android:background="#ffffff81">
 
     <Button
@@ -754,7 +754,8 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="startCoccoActivity"
-      android:text="@string/look_answer_button2" />
+      android:text="@string/look_answer_button2"
+      android:textSize="24sp" />
 
     <Button
       android:id="@+id/btnJudge"
@@ -762,6 +763,7 @@
       android:layout_height="match_parent"
       android:layout_weight="1"
       android:onClick="startEvaluationActivity"
-      android:text="@string/action" />
+      android:text="@string/action"
+      android:textSize="24sp" />
   </LinearLayout>
 </LinearLayout>
