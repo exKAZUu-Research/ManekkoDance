@@ -22,6 +22,7 @@ public class Interpreter implements Runnable {
     private final TextView textView;
     private final boolean isPiyo;
     private final Pose pose;
+    private final Context context;
 
     private Set<ActionType> actions;
     private int executionCount;
@@ -45,6 +46,7 @@ public class Interpreter implements Runnable {
         this.isPiyo = isPiyo;
         this.pose = new Pose();
         this.bearCommand = "";
+        this.context = context;
     }
 
     @Override
@@ -70,13 +72,13 @@ public class Interpreter implements Runnable {
             } else {
                 failed = true;
                 Log.v("tag", "failed");
-                charaViewSet.changeToMovingErrorImage();
+                charaViewSet.changeToMovingErrorImage(context);
             }
         } else {
             if (!failed) {
                 charaViewSet.changeToMovedImages(actions);
             } else {
-                charaViewSet.changeToMovedErrorImage();
+                charaViewSet.changeToMovedErrorImage(context);
             }
         }
         executionCount++;

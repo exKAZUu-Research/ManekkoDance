@@ -14,7 +14,7 @@ import net.exkazuu.mimicdance.interpreter.CharacterType;
 import net.exkazuu.mimicdance.models.LessonClear;
 
 public class CorrectAnswerActivity extends BaseActivity {
-    public static final int DURATION = 500;
+    private static final int DURATION = 500;
     private AnimationDrawable coccoAnimation = null;
     private AnimationDrawable piyoAnimation = null;
 
@@ -29,7 +29,7 @@ public class CorrectAnswerActivity extends BaseActivity {
         ImageView jumpPiyo = (ImageView) findViewById(R.id.piyo);
 
         startTeacherAnimation(jumpCocco);
-        startPiyoAnimation(jumpPiyo);
+        startStudentAnimation(jumpPiyo);
 
         Button again = (Button) findViewById(R.id.check_again);
         Button list = (Button) findViewById(R.id.correct_lesson_list);
@@ -68,13 +68,21 @@ public class CorrectAnswerActivity extends BaseActivity {
         coccoAnimation = new AnimationDrawable();
 
         // 画像の読み込み
-        String characterNamePrefix = CharacterType.getCharacters()[2].name().toLowerCase();
-        int jump1id = getResources().getIdentifier(characterNamePrefix + "_jump1", "drawable", getPackageName());
-        int jump2id = getResources().getIdentifier(characterNamePrefix + "_jump2", "drawable", getPackageName());
-        setAnimation(v, jump1id, jump2id, coccoAnimation);
+        String characterNamePrefix = CharacterType.getTeacher().name().toLowerCase();
+        setAnimation(v, characterNamePrefix, coccoAnimation);
     }
 
-    private void setAnimation(View v, int jump1id, int jump2id, AnimationDrawable animation) {
+    private void startStudentAnimation(View v) {
+        piyoAnimation = new AnimationDrawable();
+
+        // 画像の読み込み
+        String characterNamePrefix = CharacterType.getStudent().name().toLowerCase();
+        setAnimation(v, characterNamePrefix, piyoAnimation);
+    }
+
+    private void setAnimation(View v, String name, AnimationDrawable animation) {
+        int jump1id = getResources().getIdentifier(name + "_jump1", "drawable", getPackageName());
+        int jump2id = getResources().getIdentifier(name + "_jump2", "drawable", getPackageName());
         Drawable frame1 = getResources().getDrawable(jump1id);
         Drawable frame2 = getResources().getDrawable(jump2id);
 
@@ -92,13 +100,4 @@ public class CorrectAnswerActivity extends BaseActivity {
         animation.start();
     }
 
-    private void startPiyoAnimation(View v) {
-        piyoAnimation = new AnimationDrawable();
-
-        // 画像の読み込み
-        String characterNamePrefix = CharacterType.getCharacters()[0].name().toLowerCase();
-        int jump1id = getResources().getIdentifier(characterNamePrefix + "_jump1", "drawable", getPackageName());
-        int jump2id = getResources().getIdentifier(characterNamePrefix + "_jump2", "drawable", getPackageName());
-        setAnimation(v, jump1id, jump2id, piyoAnimation);
-    }
 }

@@ -1,6 +1,7 @@
 package net.exkazuu.mimicdance;
 
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -53,7 +54,7 @@ public class CharacterImageViewSet {
             Log.i("charaType", charaType.name());
             int id = activity.getResources().getIdentifier(name, "id", activity.getPackageName());
             bodyParts[i] = (ImageView) activity.findViewById(id);
-            String drawableName = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, charaType.name()+bodyPartTypes[i].name()) + ((i < bodyPartTypes.length - 1) ? "_up1" : "");
+            String drawableName = CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, charaType.name() + bodyPartTypes[i].name()) + ((i < bodyPartTypes.length - 1) ? "_up1" : "");
             int drawableId = activity.getResources().getIdentifier(drawableName, "drawable", activity.getPackageName());
             bodyParts[i].setImageResource(drawableId);
             bodyParts[i].setVisibility(View.VISIBLE);
@@ -61,19 +62,19 @@ public class CharacterImageViewSet {
     }
 
     public static CharacterImageViewSet createStudentLeft(Activity activity) {
-        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[0], CharacterType.getCharacters()[0], activity);
+        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[0], CharacterType.getStudent(), activity);
     }
 
     public static CharacterImageViewSet createStudentRight(Activity activity) {
-        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[1], CharacterType.getCharacters()[1], activity);
+        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[1], CharacterType.getAltStudent(), activity);
     }
 
     public static CharacterImageViewSet createTeacherLeft(Activity activity) {
-        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[2], CharacterType.getCharacters()[2], activity);
+        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[2], CharacterType.getTeacher(), activity);
     }
 
     public static CharacterImageViewSet createTeacherRight(Activity activity) {
-        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[3], CharacterType.getCharacters()[3], activity);
+        return new CharacterImageViewSet(CharacterType.getViewIdPrefixes()[3], CharacterType.getAltTeacher(), activity);
     }
 
     public void changeToInitialImages() {
@@ -105,25 +106,17 @@ public class CharacterImageViewSet {
         }
     }
 
-    public void changeToMovingErrorImage() {
-        if (charaType == CharacterType.Piyo) {
-
-            getBody().setImageResource(R.drawable.korobu_1);
-        } else {
-            getBody().setImageResource(R.drawable.alt_korobu_1);
-        }
+    public void changeToMovingErrorImage(Context context) {
+        int id = context.getResources().getIdentifier(CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, charaType.name()) + "_korobu1", "drawable", context.getPackageName());
+        getBody().setImageResource(id);
         for (int i = 0; i < bodyParts.length - 1; i++) {
             bodyParts[i].setVisibility(View.INVISIBLE);
         }
     }
 
-    public void changeToMovedErrorImage() {
-        if (charaType == CharacterType.Piyo) {
-
-            getBody().setImageResource(R.drawable.korobu_3);
-        } else {
-            getBody().setImageResource(R.drawable.alt_korobu_3);
-        }
+    public void changeToMovedErrorImage(Context context) {
+        int id = context.getResources().getIdentifier(CaseFormat.UPPER_CAMEL.to(CaseFormat.LOWER_UNDERSCORE, charaType.name()) + "_korobu3", "drawable", context.getPackageName());
+        getBody().setImageResource(id);
     }
 
     public ImageView getBody() {

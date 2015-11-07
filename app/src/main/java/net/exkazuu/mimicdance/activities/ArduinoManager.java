@@ -10,7 +10,6 @@ import android.hardware.usb.UsbAccessory;
 import android.hardware.usb.UsbManager;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.FileDescriptor;
 import java.io.FileOutputStream;
@@ -71,22 +70,22 @@ public class ArduinoManager {
         if (outputStream != null) {
             return;
         }
-        Toast toast0 = Toast.makeText(context, "onResume0 ", Toast.LENGTH_SHORT);
-        toast0.show();
+//        Toast toast0 = Toast.makeText(context, "onResume0 ", Toast.LENGTH_SHORT);
+//        toast0.show();
 
 
         // 接続されているUSBアクセサリの確認
         UsbAccessory[] accessories = usbManager.getAccessoryList();
         UsbAccessory accessory = (accessories == null ? null : accessories[0]);
         if (accessory == null) {
-            Toast toast = Toast.makeText(context, "accessory was not found.", Toast.LENGTH_SHORT);
-            toast.show();
+//            Toast toast = Toast.makeText(context, "accessory was not found.", Toast.LENGTH_SHORT);
+//            toast.show();
 
             return;
         }
 
-        Toast toast = Toast.makeText(context, "onResume: " + usbManager.hasPermission(accessory), Toast.LENGTH_SHORT);
-        toast.show();
+//        Toast toast = Toast.makeText(context, "onResume: " + usbManager.hasPermission(accessory), Toast.LENGTH_SHORT);
+//        toast.show();
 
         // USBアクセサリにアクセスする権限があるかチェック
         if (usbManager.hasPermission(accessory)) {
@@ -105,8 +104,8 @@ public class ArduinoManager {
     public static void pause() {
         closeAccessory();
 
-        Toast toast = Toast.makeText(context, "onPause", Toast.LENGTH_SHORT);
-        toast.show();
+//        Toast toast = Toast.makeText(context, "onPause", Toast.LENGTH_SHORT);
+//        toast.show();
     }
 
     public static boolean isPlugged() {
@@ -176,8 +175,8 @@ public class ArduinoManager {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
 
-            Toast toast = Toast.makeText(context, action, Toast.LENGTH_SHORT);
-            toast.show();
+//            Toast toast = Toast.makeText(context, action, Toast.LENGTH_SHORT);
+//            toast.show();
 
             if (ACTION_USB_PERMISSION.equals(action)) {
                 // USBアクセサリが接続して接続許可を得られた場合

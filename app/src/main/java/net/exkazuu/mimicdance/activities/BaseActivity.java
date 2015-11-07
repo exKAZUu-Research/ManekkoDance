@@ -118,16 +118,14 @@ public abstract class BaseActivity extends Activity {
      * @param lessonNumber
      * @param piyoCode
      * @param diffCount
-     * @param almostCorrect
      * @param clear
      */
     protected void startWrongAnswerActivity(int lessonNumber, String piyoCode,
-                                            int diffCount, boolean almostCorrect, boolean clear) {
+                                            int diffCount, boolean clear) {
         Intent intent = new Intent(this, WrongAnswerActivity.class);
         intent.putExtra("lessonNumber", lessonNumber);
         intent.putExtra("piyoCode", piyoCode);
         intent.putExtra("diffCount", diffCount);
-        intent.putExtra("almostCorrect", almostCorrect);
         if (clear) {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }

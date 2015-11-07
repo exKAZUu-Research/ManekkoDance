@@ -8,7 +8,7 @@ import net.exkazuu.mimicdance.exception.UnKnownCharacterThemeException;
 public enum CharacterType {
     Piyo, AltPiyo, Cocco, AltCocco, Bo, AltBo, Boy, AltBoy, Girl, AltGirl, Graph, AltGraph;
 
-    public static CharacterType[] getCharacters() {
+    private static CharacterType[] getCharacters() {
         switch (CharacterTheme.getCurrentTheme()) {
             case Chicken:
                 return new CharacterType[]{Piyo, AltPiyo, Cocco, AltCocco};
@@ -28,4 +28,21 @@ public enum CharacterType {
     public static String[] getViewIdPrefixes() {
         return new String[]{Piyo.name(), AltPiyo.name(), Cocco.name(), AltCocco.name()};
     }
+
+    public static CharacterType getStudent() {
+        return getCharacters()[0];
+    }
+
+    public static CharacterType getAltStudent() {
+        return getCharacters()[1];
+    }
+
+    public static CharacterType getTeacher() {
+        return getCharacters()[2];
+    }
+
+    public static CharacterType getAltTeacher() {
+        return getCharacters()[3];
+    }
+
 }
