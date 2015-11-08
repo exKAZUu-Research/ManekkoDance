@@ -75,7 +75,7 @@ public class TitleActivity extends BaseActivity {
     public void charaDialog(View view) {
         final String[] items = CharacterTheme.getThemeValues();
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("テーマ選択");
+        builder.setTitle("テーマをえらぶ");
         builder.setItems(items, new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 CharacterTheme.setCharacterTheme(which);
